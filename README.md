@@ -19,7 +19,7 @@ Passo a passo para iniciar o projeto:
 
 2. Instale o framework serverless em seu computador. Mais informações [aqui](https://www.serverless.com/framework/docs/getting-started)
 
-```json
+```bash
 npm install -g serverless
 ```
 
@@ -27,7 +27,7 @@ npm install -g serverless
 
 4. Em seguida insira as credenciais e execute o comando conforme exemplo:
 
-```json
+```bash
 serverless config credentials \
   --provider aws \
   --key AKIAIOSFODNN7EXAMPLE \
@@ -36,7 +36,7 @@ serverless config credentials \
 
 Também é possivel configurar via [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) executando o comando:
 
-```json
+```
 $ aws configure
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
@@ -52,7 +52,7 @@ Após executar as instruções acima, o serverless estará pronto para ser utili
 
 5. Para efetuar o deploy da solução na sua conta aws execute (acesse a pasta [visao-computacional](./visao-computacional) ):
 
-```
+```bash
 serverless deploy
 ```
 
