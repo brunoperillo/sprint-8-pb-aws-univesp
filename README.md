@@ -1,7 +1,45 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
-Avaliação da oitava sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
+Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compass] para formação em *machine learning* com [AWS][aws].
+***
+# Status do projeto
+<h4 align="center"> 
+    :construction:  Projeto em construção  :construction:
+</h4>
 
+## Introdução
+
+
+## Objetivo
+
+
+## Funcionamento 
+
+
+## Organização
+O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre os integrantes. O README.md foi escrito de forma objetiva e clara para facilitar a compreensão do projeto.
+
+## Ferramentas utilizadas
+- AWS
+- VSCode
+- Git
+
+## Dificuldades Conhecidas
+
+## Referências
+
+----------
+
+## Desenvolvedores do projeto
+| [<img src="https://avatars.githubusercontent.com/u/81330043?v=4" width=115><br><sub>Bernardo Lima</sub>](https://github.com/belima93) | [<img src="https://avatars.githubusercontent.com/u/25699466?v=4" width=115><br><sub>Bruno Monserrat Perillo</sub>](https://github.com/brunoperillo) |  [<img src="https://avatars.githubusercontent.com/u/78061851?v=4" width=115><br><sub>Carlos Roberto Camilo</sub>](https://github.com/crobertocamilo) | [<img src="https://avatars.githubusercontent.com/u/94749597?v=4" width=115><br><sub>O'Dhara Maggi</sub>](https://github.com/odharamaggi)|
+| :---: | :---: | :---: |:---: |
+
+***
+   [compass]: <https://compass.uol/en/home/>
+   [aws]: <https://aws.amazon.com/pt/>
+   [sprint8main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/tree/main>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***
 
