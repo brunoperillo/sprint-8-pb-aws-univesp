@@ -10,7 +10,7 @@ resources:
     MyS3Bucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: sprint-8-gatos
+        BucketName: sprint-8-vision
         BucketEncryption:
           ServerSideEncryptionConfiguration:
             - ServerSideEncryptionByDefault:
@@ -51,7 +51,8 @@ resources:
                 - Effect: Allow
                   Action:
                     - rekognition:DetectLabels
-                  Resource: "*"
+                    - rekognition:DetectFaces  # New statement for DetectFaces
+                  Resource: "*"  # Update with the appropriate resource if needed
           - PolicyName: ApiGatewayPostAccessPolicy
             PolicyDocument:
               Version: '2012-10-17'
