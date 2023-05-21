@@ -52,6 +52,14 @@ resources:
                   Action:
                     - rekognition:DetectLabels
                   Resource: "*"
+          - PolicyName: ApiGatewayPostAccessPolicy
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - execute-api:Invoke
+                  Resource: "*"
 
 functions:
   health:
