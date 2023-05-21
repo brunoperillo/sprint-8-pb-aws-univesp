@@ -1,6 +1,7 @@
 import json
 import boto3
-from datetime import datetime, date
+import botocore
+import datetime
 
 def health(event, context):
     body = {
@@ -32,7 +33,7 @@ def v2_description(event, context):
     
 class CustomEncoder(json.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj, (datetime, date)):
+        if isinstance(obj, datetime.datetime):
             return obj.isoformat()
         return super().default(obj)
     
@@ -99,10 +100,83 @@ def v1Label(event, context):
         }
     
 def v2Emotion(event, context):
-    body = {
-        "message": "funcionou a função /v2/vision"
-    }
+    
+    # Extract name and image name from the POST request body
+    try:
+        body = json.loads(event['body'])
+        bucket_name = body['bucket']
+        image_name = body['imageName']
 
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    except KeyError as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({'error': f'Missing required field: {e}'})
+        }
 
-    return response
+    except json.JSONDecodeError:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({'error': 'Invalid JSON payload.'})
+        }
+
+    # Connection configs
+    try:
+        # S3 connection
+        s3_client = boto3.client('s3')
+        # Create an Amazon Rekognition client
+        rekognition = boto3.client('rekognition')
+    
+        response = rekognition.detect_faces(
+            Image={'S3Object': {'Bucket': bucket_name, 'Name': image_name}},
+            Attributes=['ALL']
+        )
+
+        # Get the metadata of the image object
+        response_metadata = s3_client.head_object(Bucket=bucket_name, Key=image_name)
+        url_to_image = f"https://{bucket_name}.s3.amazonaws.com/{image_name}"
+        created_image = response_metadata['LastModified']
+
+        # List comprehension loop to DetectFaces in the response
+        faces = [
+            {
+                "position": {
+                    "Height": float(faceDetail["BoundingBox"]["Height"]),
+                    "Left": float(faceDetail["BoundingBox"]["Left"]),
+                    "Top": float(faceDetail["BoundingBox"]["Top"]),
+                    "Width": float(faceDetail["BoundingBox"]["Width"])
+                },
+                "classified_emotion": faceDetail["Emotions"][0]["Type"],
+                "classified_emotion_confidence": float(faceDetail["Emotions"][0]["Confidence"])
+            }
+            for faceDetail in response['FaceDetails']
+        ]
+
+        # Constructs the response body
+        response_body = {
+            "url_to_image": url_to_image,
+            "created_image": created_image,
+            "faces": faces
+        }
+        
+        # Convert the dictionary to a JSON string
+        try:
+            response_json = json.dumps(response_body, cls=CustomEncoder)
+        except Exception as e:
+            return {
+                'statusCode': 500,
+                'body': json.dumps({'error': str(e)})
+            }
+
+        # Print logs to CloudWatch
+        print(response_json)
+
+        return {
+            'statusCode': 200,
+            'body': response_json
+        }
+
+    except botocore.exceptions.ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({'error': str(e)})
+        }
