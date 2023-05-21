@@ -5,9 +5,29 @@ Avaliação da oitava sprint do programa de bolsas Compass UOL para formação e
 
 ***
 
-## Execução
+## Introdução
+_Escrever uma breve introdução a respeito de funções lambda, regoknition e api gateway_
 
-Com base nas atividades anteriores realizadas, crie um conjunto de lambdas que irão dar suporte a APIs que irão rodar o "rekognition" para extrair tags de imagens postadas no S3, e também utilizaremos o CloudWatch para gravar os logs dos resultados.
+---
+## Objetivo
+Criar um conjunto de funções Lambda que irão dar suporte à APIs para realizar o trabalho de Rekognition, extraindo assim, tags de imagens postadas no S3. Usaremos ainda o Amazon CloudWatch para registrar os logs de resultados.
+
+## Desenvolvimento
+
+---
+## Execução
+---
+## Resultados
+---
+## Conclusão
+---
+## Dificuldades
+
+---
+## Integrantes - Grupo 2
+
+| [<img src="https://avatars.githubusercontent.com/u/97908745?v=4" width=115><br><sub>Ana Vitória</sub>](https://github.com/anaVitoriaLouro) | [<img src="https://avatars.githubusercontent.com/u/87142990?v=4" width=115><br><sub>Luciene Godoy</sub>](https://github.com/LucieneGodoy) |  [<img src="https://avatars.githubusercontent.com/u/72028902?v=4" width=115><br><sub>Luiz Sassi</sub>](https://github.com/luizrsassi) | [<img src="https://avatars.githubusercontent.com/u/73674662?v=4" width=115><br><sub>Marcos Vinicios</sub>](https://github.com/onativo)|
+| :---: | :---: | :---: |:---: |
 
 **Especificações**:
 
@@ -274,43 +294,3 @@ Exemplos e docs de referência:
 
 - <https://docs.aws.amazon.com/rekognition/latest/dg/faces-detect-images.html> (Trabalhando com Faces)
 - <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html> (Exemplos de código)
-
----
-
-## Observações retorno esperado
-
-- os campos de entrada e saida deverão estar nos formatos e com os nomes apresentados.
-- status code para sucesso da requisição será `200`
-- status code para erros deverá ser `500`
-
-
-***
-
-## O que será avaliado?
-
-- Projeto em produção na AWS
-- Em Python conforme projeto base disponibilizado
-- Seguir as atividades na ordem proposta
-- Sobre as rotas:
-  - Possuir em cada rota os retornos esperados (somente campos solicitados e **exatamente** no formato conforme especificação)
-- Infra-estrutura como código (evite ações manuais na console)
-- Organização geral do código fonte
-  - Estrutura de pastas
-  - Estrutura da logica de negócio
-  - Divisão de responsabilidades em arquivos/pastas distintos
-  - Otimização do código fonte (evitar duplicações de código)
-- Objetividade do README.md
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-8-pb-aws-univesp;
-- **O trabalho deve ser feito em grupos de 4 integrantes**;
-  - Não repetir formação de grupos já criados em sprints anteriores;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um README.md;
-  - Documentar detalhes sobre como a avaliação foi desenvolvida;
-  - Dificuldades conhecidas;
-  - Como utilizar o sistema;
-- O prazo de entrega é até às 12h do dia 29/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp)).
