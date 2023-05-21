@@ -1,10 +1,5 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
-Avaliação da oitava sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
-
-
-***
-
 ## Introdução
 _Escrever uma breve introdução a respeito de funções lambda, regoknition e api gateway_
 
@@ -26,8 +21,12 @@ Criar um conjunto de funções Lambda que irão dar suporte à APIs para realiza
 ---
 ## Integrantes - Grupo 2
 
-| [<img src="https://avatars.githubusercontent.com/u/97908745?v=4" width=115><br><sub>Ana Vitória</sub>](https://github.com/anaVitoriaLouro) | [<img src="https://avatars.githubusercontent.com/u/87142990?v=4" width=115><br><sub>Luciene Godoy</sub>](https://github.com/LucieneGodoy) |  [<img src="https://avatars.githubusercontent.com/u/72028902?v=4" width=115><br><sub>Luiz Sassi</sub>](https://github.com/luizrsassi) | [<img src="https://avatars.githubusercontent.com/u/73674662?v=4" width=115><br><sub>Marcos Vinicios</sub>](https://github.com/onativo)|
-| :---: | :---: | :---: |:---: |
+<div align="center">
+
+  | [<img src="https://avatars.githubusercontent.com/u/97908745?v=4" width=115><br><sub>Ana Vitória</sub>](https://github.com/anaVitoriaLouro) | [<img src="https://avatars.githubusercontent.com/u/87142990?v=4" width=115><br><sub>Luciene Godoy</sub>](https://github.com/LucieneGodoy) |  [<img src="https://avatars.githubusercontent.com/u/72028902?v=4" width=115><br><sub>Luiz Sassi</sub>](https://github.com/luizrsassi) | [<img src="https://avatars.githubusercontent.com/u/73674662?v=4" width=115><br><sub>Marcos Vinicios</sub>](https://github.com/onativo)|
+  | :---: | :---: | :---: |:---: |
+
+</div>
 
 **Especificações**:
 
