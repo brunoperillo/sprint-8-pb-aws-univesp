@@ -9,7 +9,7 @@ def health(event, context):
         "input": event,
     }
 
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    response = {"statusCode": 200, "body": json.dumps(body["input"])}
 
     return response
 
@@ -30,12 +30,6 @@ def v2_description(event, context):
     response = {"statusCode": 200, "body": json.dumps(body)}
 
     return response
-    
-class CustomEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, datetime.datetime):
-            return obj.isoformat()
-        return super().default(obj)
     
 def v1Label(event, context):
     # Extract bucket name and image name from the POST request body
@@ -67,12 +61,12 @@ def v1Label(event, context):
         )
 
         # Extract the detected labels from the response
-        labels = [{'confidence': label['Confidence'], 'label': label['Name']} for label in response["Labels"]]
+        labels = [{'confidence': label['Confidence'], 'Name': label['Name']} for label in response["Labels"]]
         
         # Get the metadata of the image object
         response = s3_client.head_object(Bucket=bucket_name, Key=image_name)
         image_url = f"https://{bucket_name}.s3.amazonaws.com/{image_name}"
-        creation_time = response['LastModified']
+        creation_time = response['LastModified'].strftime('%d-%m-%Y %H:%M:%S')
         
         # Create a dictionary representing the JSON body
         response_body = {
@@ -82,7 +76,7 @@ def v1Label(event, context):
         }
 
         # Convert the dictionary to a JSON string using the custom encoder
-        response_json = json.dumps(response_body, cls=CustomEncoder)
+        response_json = json.dumps(response_body)
         
         # Print logs to CloudWatch((?))
         print(response_json)
@@ -134,7 +128,7 @@ def v2Emotion(event, context):
         # Get the metadata of the image object
         response_metadata = s3_client.head_object(Bucket=bucket_name, Key=image_name)
         url_to_image = f"https://{bucket_name}.s3.amazonaws.com/{image_name}"
-        created_image = response_metadata['LastModified']
+        created_image = response_metadata['LastModified'].strftime('%d-%m-%Y %H:%M:%S')
 
         # List comprehension loop to DetectFaces in the response
         faces = [
@@ -160,7 +154,7 @@ def v2Emotion(event, context):
         
         # Convert the dictionary to a JSON string
         try:
-            response_json = json.dumps(response_body, cls=CustomEncoder)
+            response_json = json.dumps(response_body)
         except Exception as e:
             return {
                 'statusCode': 500,
