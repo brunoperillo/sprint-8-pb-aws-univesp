@@ -45,12 +45,12 @@ def v1Label(event, context):
         image_name = body['imageName']
     except KeyError as e:
         return {
-            'statusCode': 400,
+            'statusCode': 500,
             'body': json.dumps({'error': f'Missing required field: {e}'})
         }
     except json.JSONDecodeError:
         return {
-            'statusCode': 400,
+            'statusCode': 500,
             'body': json.dumps({'error': 'Invalid JSON payload'})
         }
     
@@ -95,7 +95,7 @@ def v1Label(event, context):
         
     except boto3.exceptions.S3Exception as e:
         return {
-            'statusCode': 400,
+            'statusCode': 500,
             'body': json.dumps({'error': str(e)})
         }
     
