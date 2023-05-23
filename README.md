@@ -11,6 +11,27 @@ Avaliação da oitava sprint do programa de bolsas Compass UOL para formação e
 
 ***
 
+## Introdução
+
+****
+
+## Objetivo
+
+***
+
+## Funcionamento 
+
+****
+
+## Organização
+
+*** 
+
+## Dificuldades Conhecidas
+
+
+
+
 ## Execução
 
 Com base nas atividades anteriores realizadas, crie um conjunto de lambdas que irão dar suporte a APIs que irão rodar o "rekognition" para extrair tags de imagens postadas no S3, e também utilizaremos o CloudWatch para gravar os logs dos resultados.
