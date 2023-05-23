@@ -18,9 +18,33 @@ functions:
       - httpApi:
           path: /v1
           method: get
+  v1visionDescription:
+    handler: handler.v1_description
+    events:
+      - httpApi:
+          path: /v1/vision
+          method: post
   v2Description:
     handler: handler.v2_description
     events:
       - httpApi:
           path: /v2
           method: get
+  v2VisionDescription:
+    handler: handler.v2_description
+    events:
+      - httpApi:
+          path: /v2/vision
+          method: post
+
+resources:
+  Resources:
+   MeuBucketdeImagens:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: bucket-images-sprint8
+      PublicAccessBlockConfiguration: 
+        BlockPublicAcls: false
+      OwnershipControls: 
+        Rules: 
+          - ObjectOwnership: ObjectWriter
