@@ -5,6 +5,8 @@ provider:
   name: aws
   runtime: python3.9
   region: us-east-1
+  httpApi:
+    cors: true
   # The below creates the necessary permissions to access S3, Rekognition, and ApiGateway actions
   iam:
     role:
@@ -42,6 +44,9 @@ resources:
               Principal:
                 Service: lambda.amazonaws.com
               Action: sts:AssumeRole
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
         Policies:
         - PolicyName: RekognitionAccessPolicy
           PolicyDocument:
@@ -53,7 +58,7 @@ resources:
                   - rekognition:DetectLabels
                 Resource: "*"
                 
-# This create all five routes of the project
+# This creates all five routes of the project
 functions:
   health:
     handler: handler.health
@@ -80,6 +85,8 @@ functions:
           path: /v1/vision
           method: post
     role: MyLambdaFunctionRole
+    logRetentionInDays: 7
+    tracing: true
   v2EmotionFunction:
     handler: handler.v2Emotion
     events:
@@ -87,3 +94,5 @@ functions:
           path: /v2/vision
           method: post
     role: MyLambdaFunctionRole
+    logRetentionInDays: 7
+    tracing: true
