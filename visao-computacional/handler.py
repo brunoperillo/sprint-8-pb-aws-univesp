@@ -130,7 +130,7 @@ def v2Emotion(event, context):
         url_to_image = f"https://{bucket_name}.s3.amazonaws.com/{image_name}"
         created_image = response_metadata['LastModified'].strftime('%d-%m-%Y %H:%M:%S')
 
-        # List comprehension loop to DetectFaces in the response
+        # List comprehension that loops to DetectFaces in the response
         faces = [
             {
                 "position": {
@@ -145,6 +145,21 @@ def v2Emotion(event, context):
             for faceDetail in response['FaceDetails']
         ]
 
+        # This checks if the 'faces' object is empty, if so, returns "Null"
+        if (faces == []):
+            faces = [
+                {
+                    "position": {
+                        "Height": None,
+                        "Left": None,
+                        "Top": None,
+                        "Width":  None
+                    },
+                    "classified_emotion": None,
+                    "classified_emotion_confidence": None
+                }
+            ]
+        
         # Constructs the response body
         response_body = {
             "url_to_image": url_to_image,
