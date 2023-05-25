@@ -42,7 +42,7 @@ resources:
    MeuBucketdeImagens:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: bucket-images-sprint8
+      BucketName: serverless-sprint8-kelly
       PublicAccessBlockConfiguration: 
         BlockPublicAcls: false
       OwnershipControls: 
