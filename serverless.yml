@@ -1,0 +1,58 @@
+service: vision
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+  iamRoleStatements:
+    - Effect: Allow
+      Action: 
+        - "rekognition:DetectLabels"
+        - "rekognition:DetectFaces"
+        - "s3:GetObject"
+      Resource: 
+        - "*"
+
+resources:
+  Resources:
+    MyS3BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: mycatphotos-264727559380
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service: rekognition.amazonaws.com
+              Action:
+                - "s3:GetObject"
+                - "s3:GetObjectAcl"
+              Resource: "arn:aws:s3:::mycatphotos-264727559380/*"
+                         
+functions:
+  health:
+    handler: src/handler.health
+    events:
+      - http:
+          path: /
+          method: get
+  v1Description:
+    handler: src/handler.v1_description
+    events:
+      - http:
+          path: /v1
+          method: get
+  v2Description:
+    handler: src/handler.v2_description
+    events:
+      - http:
+          path: /v2
+          method: get
+  v1Vision:
+    handler: src/handler.v1_vision
+    events:
+      - http:
+          path: /v1/vision
+          method: post
+
