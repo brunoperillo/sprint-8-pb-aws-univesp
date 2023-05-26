@@ -24,14 +24,25 @@ provider:
             - "execute-api:*"
           Resource: "*"
 
-# This creates the S3 bucket from the deploy
+# This creates a public S3 bucket from the deploy
 resources:
   Resources:
     MyS3Bucket:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: sprint-8-vision
-    
+    MyS3BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref MyS3Bucket
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Principal: '*'
+              Action: s3:PutObject
+              Resource: !Sub arn:aws:s3:::${MyS3Bucket}/*
+
+
     # This creates a role for the lambda function on routes /v1/vision & /v2/vision
     MyLambdaFunctionRole:
       Type: AWS::IAM::Role
@@ -57,7 +68,7 @@ resources:
                   - rekognition:DetectFaces
                   - rekognition:DetectLabels
                 Resource: "*"
-                
+
 # This creates all five routes of the project
 functions:
   health:
@@ -86,7 +97,6 @@ functions:
           method: post
     role: MyLambdaFunctionRole
     logRetentionInDays: 7
-    tracing: true
   v2EmotionFunction:
     handler: handler.v2Emotion
     events:
@@ -95,4 +105,3 @@ functions:
           method: post
     role: MyLambdaFunctionRole
     logRetentionInDays: 7
-    tracing: true
