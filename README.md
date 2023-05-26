@@ -426,8 +426,6 @@ Default output format [None]: ENTER
 
 ```
 
-  
-
 #### Observação
 
   
