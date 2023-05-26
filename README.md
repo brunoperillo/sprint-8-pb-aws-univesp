@@ -1,6 +1,6 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
-Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compass] para formação em *machine learning* com [AWS][aws].
+Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compass] para formação em *machine learning* com [AWS][aws]. [Diretrizes do pedido][sprint8main] 
 ***
 # Status do projeto
 <h4 align="center"> 
@@ -8,7 +8,9 @@ Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compa
 </h4>
 
 ## Introdução
+A visão computacional, também conhecida como reconhecimento visual ou percepção visual, é um campo de estudo que se concentra em permitir que os computadores obtenham uma compreensão de alto nível de imagens e vídeos digitais. Envolve o desenvolvimento de algoritmos e técnicas para extrair informações significativas e fazer inferências a partir de dados visuais.
 
+Uma ferramenta poderosa no campo da visão computacional é o AWS Rekognition, que oferece uma ampla variedade de recursos e funcionalidades. Ele permite que os desenvolvedores executem tarefas como análise de imagem e vídeo, detecção e reconhecimento de objetos, análise facial, análise de sentimentos e muito mais. Aproveitando modelos e APIs pré-treinados, os desenvolvedores podem integrar facilmente essas funcionalidades em seus aplicativos sem a necessidade de extensa experiência em aprendizado de máquina.
 
 ## Objetivo
 
