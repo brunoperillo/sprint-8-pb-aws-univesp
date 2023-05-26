@@ -4,14 +4,8 @@
 # Grupo 3
 
 
-
-- Diego Lopes
-- Irati Maffra
-- Kelly Lopes
-- Viviane Alves
-
 ***
-
+ 
 ## Introdução do Projeto
 
 Nessa Sprint foram abordados os serviços das *funções Lambda*, o *Rekognition*, *CloudWatch* e *API Gateway*. 
@@ -43,7 +37,10 @@ e com recursos avançados de análise visual.
 ## Dificuldades Conhecidas
 
 
+## Desenvolvedores do projeto
 
+|| <br><sub>  [<img src="https://avatars.githubusercontent.com/u/96358027?v=4"  width=115><br><sub>Diego</sub>](https://github.com/Diegox0301) | [<img src="https://avatars.githubusercontent.com/u/124359272?v=4" width=115><br><sub>Irati Gonçalves Maffra</sub>](https://github.com/IratiMaffra) | [<img src="https://avatars.githubusercontent.com/u/88354075?v=4" width=115><br><sub>Kelly Silva</sub>](https://github.com/KellyPLSilva) | [<img src="https://avatars.githubusercontent.com/u/117780664?v=4" width=115><br><sub>Viviane Alves</sub>](https://github.com/Vivianes86) |
+| :---: | :---: | :---: |:---: |:---: |
 
 
 
