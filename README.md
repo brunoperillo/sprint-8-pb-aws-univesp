@@ -1,9 +1,8 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
-## 📗Formação em Machine Learning para AWS
+## 📗Programa de Bolsas Compass UOL - Formação em Machine Learning com AWS
+***
+# Grupo 3
 
-
-
-# Integrantes
 
 
 - Diego Lopes
