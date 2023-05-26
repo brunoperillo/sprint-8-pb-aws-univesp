@@ -57,7 +57,7 @@ def v1Label(event, context):
         # Call Amazon Rekognition to detect labels in the image
         response = rekognition.detect_labels(
             Image={'S3Object': {'Bucket': bucket_name, 'Name': image_name}},
-            MaxLabels=5  # Change this value for more or fewer labels
+            MaxLabels=4  # Change this value for more or fewer labels
         )
 
         # Extract the detected labels from the response
