@@ -4,6 +4,15 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: python3.9
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "rekognition:DetectLabels"
+        - "rekognition:DetectFaces"
+        - "s3:GetObject"
+      Resource:
+        - "*"
+
 
 functions:
   health:
@@ -19,7 +28,7 @@ functions:
           path: /v1
           method: get
   v1visionDescription:
-    handler: handler.v1_description
+    handler: handler.v1vision_description
     events:
       - httpApi:
           path: /v1/vision
@@ -31,7 +40,7 @@ functions:
           path: /v2
           method: get
   v2VisionDescription:
-    handler: handler.v2_description
+    handler: handler.v2vision_description
     events:
       - httpApi:
           path: /v2/vision
@@ -42,7 +51,7 @@ resources:
    MeuBucketdeImagens:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: serverless-sprint8-kelly
+      BucketName: bucket-images-sprint8
       PublicAccessBlockConfiguration: 
         BlockPublicAcls: false
       OwnershipControls: 
