@@ -159,6 +159,20 @@ def v2Emotion(event, context):
                     "classified_emotion_confidence": None
                 }
             ]
+            # IF any null values in the repsonse
+            response_body = {
+                "url_to_image": url_to_image,
+                "created_image": created_image,
+                "faces": faces
+            }
+
+            # Convert the dictionary to a JSON string
+            response_json = json.dumps(response_body)
+
+            return {
+                'statusCode': 500,
+                'body': response_json
+            }
         
         # Constructs the response body
         response_body = {
