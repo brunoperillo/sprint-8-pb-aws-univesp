@@ -1,6 +1,7 @@
 <div style="display: flex; align-items: center;">
     <img src="assets/sprint_8.png" style=" max-inline-size:120%;">
 </div>
+
 ## Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
 ## Introdução
