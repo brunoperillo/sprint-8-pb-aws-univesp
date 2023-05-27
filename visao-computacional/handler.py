@@ -75,10 +75,10 @@ def v1Label(event, context):
             "labels": labels
         }
 
-        # Convert the dictionary to a JSON string using the custom encoder
+        # Convert the dictionary to a JSON string
         response_json = json.dumps(response_body)
         
-        # Print logs to CloudWatch((?))
+        # Print logs to CloudWatch
         print(response_json)
 
         # Return the JSON string as the response body of the Lambda function
@@ -87,7 +87,7 @@ def v1Label(event, context):
             'body': response_json
         }
         
-    except boto3.exceptions.S3Exception as e:
+    except botocore.exceptions.ClientError as e:
         return {
             'statusCode': 500,
             'body': json.dumps({'error': str(e)})
@@ -168,14 +168,8 @@ def v2Emotion(event, context):
         }
         
         # Convert the dictionary to a JSON string
-        try:
-            response_json = json.dumps(response_body)
-        except Exception as e:
-            return {
-                'statusCode': 500,
-                'body': json.dumps({'error': str(e)})
-            }
-
+        response_json = json.dumps(response_body)
+            
         # Print logs to CloudWatch
         print(response_json)
 

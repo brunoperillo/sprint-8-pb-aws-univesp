@@ -13,11 +13,12 @@ provider:
       statements:
         - Effect: "Allow"
           Action:
-            - "s3:*"
+            - "s3:GetObject"
           Resource: "*"
         - Effect: "Allow"
           Action:
-            - "rekognition:*"
+          - "rekognition:DetectFaces"
+          - "rekognition:DetectLabels"
           Resource: "*"
         - Effect: "Allow"
           Action: 
@@ -31,43 +32,7 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: sprint-8-vision
-    MyS3BucketPolicy:
-      Type: AWS::S3::BucketPolicy
-      Properties:
-        Bucket: !Ref MyS3Bucket
-        PolicyDocument:
-          Statement:
-            - Effect: Allow
-              Principal: '*'
-              Action: s3:PutObject
-              Resource: !Sub arn:aws:s3:::${MyS3Bucket}/*
-
-
-    # This creates a role for the lambda function on routes /v1/vision & /v2/vision
-    MyLambdaFunctionRole:
-      Type: AWS::IAM::Role
-      Properties:
-        RoleName: MyLambdaFunctionRole
-        AssumeRolePolicyDocument:
-          Version: '2012-10-17'
-          Statement:
-            - Effect: Allow
-              Principal:
-                Service: lambda.amazonaws.com
-              Action: sts:AssumeRole
-        ManagedPolicyArns:
-          - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
-
-        Policies:
-        - PolicyName: RekognitionAccessPolicy
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action:
-                  - rekognition:DetectFaces
-                  - rekognition:DetectLabels
-                Resource: "*"
+        AccessControl: PublicRead
 
 # This creates all five routes of the project
 functions:
@@ -95,13 +60,9 @@ functions:
       - httpApi:
           path: /v1/vision
           method: post
-    role: MyLambdaFunctionRole
-    logRetentionInDays: 7
   v2EmotionFunction:
     handler: handler.v2Emotion
     events:
       - httpApi:
           path: /v2/vision
           method: post
-    role: MyLambdaFunctionRole
-    logRetentionInDays: 7
