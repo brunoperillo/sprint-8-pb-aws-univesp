@@ -123,7 +123,7 @@ Faça requisições `POST` para a rota /v1/vision, inserindo no body da requisi�
 
 <div align="center">
   <img src="./assets/result_imgs/v1-vision.png">
-  <sub><a>https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a></sub>
+  <a>https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
 </div>
 
 ---
@@ -135,7 +135,7 @@ Lembre-se de modificar o nome da imagem para referênciar uma imagem que possua 
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision.png">
-  <sub><a>https://sprint-8-vision.s3.amazonaws.com/raiva.png</a></sub>
+  <a>https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
 </div>
 
 <br>
@@ -143,7 +143,7 @@ Caso exista mais de um rosto na sua imagem, a resposta deverá ser retornada com
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-varias.png">
-  <sub><a>https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a></sub>
+  <a>https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
 </div>
 
 ---
@@ -154,7 +154,7 @@ Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta es
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-null.png">
-  <sub><a>https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a></sub>
+  <a>https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
 </div>
 
 <br>
