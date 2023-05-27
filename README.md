@@ -81,7 +81,9 @@ Adicione essas permissões para que os arquivos no seu bucket estejam acessívei
 ---
 
 ## Execução
+
 ### GET /
+
 Faça requisições para os endpoints obtidos após o deploy.
 
 A rota raíz, ou /, deverá retornar uma mensagem como observado abaixo:
@@ -123,7 +125,7 @@ Faça requisições `POST` para a rota /v1/vision, inserindo no body da requisi�
 
 <div align="center">
   <img src="./assets/result_imgs/v1-vision.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
 </div>
 
 ---
@@ -135,7 +137,7 @@ Lembre-se de modificar o nome da imagem para referênciar uma imagem que possua 
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
 </div>
 
 <br>
@@ -143,18 +145,18 @@ Caso exista mais de um rosto na sua imagem, a resposta deverá ser retornada com
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-varias.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
 </div>
 
 ---
 
 ## Tratamento de erros
 
-Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta esperada deverá retornar os campos de `position` iguais "null", conforme exemplo:
+Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta esperada deverá retornar os campos de `position` iguais "null" e código de erro igual a _500_, conforme exemplo:
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-null.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
 </div>
 
 <br>
