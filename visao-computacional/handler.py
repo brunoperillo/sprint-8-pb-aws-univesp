@@ -23,7 +23,6 @@ def v1_description(event, context):
 
 
 def v1vision_description(event, context):
-
     client = boto3.client("rekognition")
     s3 = boto3.client("s3")
 
@@ -35,7 +34,6 @@ def v1vision_description(event, context):
     response = client.detect_labels(
         Image={"Bytes": file_content}, MaxLabels=3, MinConfidence=70
     )
-
 
     print(response)
 
@@ -52,10 +50,18 @@ def v2_description(event, context):
     return response
 
 def v2vision_description(event, context):
-    body = {
-        "message": "VISION api version 2.1."
-    }
+    client = boto3.client("rekognition")
+    s3 = boto3.client("s3")
 
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    # reading file from s3 bucket and passing it as bytes
+    fileObj = s3.get_object(Bucket="bucket-images-sprint8", Key="jovem.jpg")
+    file_content = fileObj["Body"].read()
+
+    # passing bytes data
+    response = client.detect_faces(
+        Image={"Bytes": file_content}
+    )
+
+    print(response)
 
     return response
