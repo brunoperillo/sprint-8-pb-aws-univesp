@@ -39,7 +39,7 @@ def v1vision_description(event, context):
 
     print(response)
 
-    return "Thanks"
+    return response
 
 
 def v2_description(event, context):
