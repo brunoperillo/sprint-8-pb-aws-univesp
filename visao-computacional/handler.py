@@ -169,6 +169,9 @@ def v2Emotion(event, context):
             # Convert the dictionary to a JSON string
             response_json = json.dumps(response_body)
 
+            # Print logs to CloudWatch
+            print(response_body)
+
             return {
                 'statusCode': 500,
                 'body': response_json

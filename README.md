@@ -183,9 +183,55 @@ O envio de uma requisição com uma imagem não presente no bucket selecionado t
   <sub>Arquivo não presente no bucket selecionado</sub>
 </div>
 
-## Conclusão
+---
+
+## Visualizando logs no AWS CloudWatch
+
+### Rota POST /v1/vision
+
+<div align="center" style="padding: 40px;">
+  <img src="./assets/result_imgs/v1-Cloudwatch.png">
+  <sub>
+    Requisição da rota /v1/vision <br>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
+  </sub>
+</div>
+
+### Rota POST /v2/vision
+
+<div align="center" style="padding: 40px;">
+  <img src="./assets/result_imgs/v2-Cloudwatch.png">
+  <sub>
+    Requisição da rota /v2/vision com uma emoção detectada<br>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
+  </sub>
+</div>
+
+### Rota POST /v2/vision
+
+<div align="center" style="padding: 40px;">
+  <img src="./assets/result_imgs/v2-variasCloudwatch.png">
+  <sub>
+    Requisição da rota /v2/vision com várias emoções detectadas<br>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
+  </sub>
+</div>
+
+<br>
+
+### Rota POST /v2/vision com erro
+
+<div align="center" style="padding: 40px;">
+  <img src="./assets/result_imgs/v2-nullCloudwatch.png">
+  <sub>
+    Requisição da rota /v2/vision passando uma imagem sem faces<br>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
+  </sub>
+</div>
 
 ---
+
+## Conclusão
 
 ## Dificuldades
 
