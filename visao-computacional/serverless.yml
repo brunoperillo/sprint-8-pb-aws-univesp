@@ -32,7 +32,11 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: sprint-8-vision
-        AccessControl: PublicRead
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: ObjectWriter
 
 # This creates all five routes of the project
 functions:
