@@ -12,10 +12,10 @@ Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compa
 ## Introdução
 A visão computacional, também conhecida como reconhecimento visual ou percepção visual, é um campo de estudo que se concentra em permitir que os computadores obtenham uma compreensão de alto nível de imagens e vídeos digitais. Envolve o desenvolvimento de algoritmos e técnicas para extrair informações significativas e fazer inferências a partir de dados visuais.
 
-Uma ferramenta poderosa no campo da visão computacional é o AWS Rekognition, que oferece uma ampla variedade de recursos e funcionalidades. Ele permite que os desenvolvedores executem tarefas como análise de imagem e vídeo, detecção e reconhecimento de objetos, análise facial, análise de sentimentos e muito mais. Aproveitando modelos e APIs pré-treinados, os desenvolvedores podem integrar facilmente essas funcionalidades em seus aplicativos sem a necessidade de extensa experiência em aprendizado de máquina.
+Uma ferramenta poderosa no campo da visão computacional é o [AWS Rekognition][Amazon Rekognition], que oferece uma ampla variedade de recursos e funcionalidades. Ele permite que os desenvolvedores executem tarefas como análise de imagem e vídeo, detecção e reconhecimento de objetos, análise facial, análise de sentimentos e muito mais. Aproveitando modelos e APIs pré-treinados, os desenvolvedores podem integrar facilmente essas funcionalidades em seus aplicativos sem a necessidade de extensa experiência em aprendizado de máquina.
 
 ## Objetivo
-Disponibilizar uma solução pronta para produção na AWS, capaz de receber requisições de imagens, extrair informações relevantes por meio do AWS Rekognition e retornar os resultados de forma estruturada, atendendo às especificações e formatos esperados para cada rota da API.
+Disponibilizar uma solução pronta para produção na AWS, capaz de receber requisições de imagens, extrair informações relevantes por meio do [AWS Rekognition][Amazon Rekognition] e retornar os resultados de forma estruturada, atendendo às especificações e formatos esperados para cada rota da API.
 
 ## Requisitos
 Node.js (versão 10 ou superior)
@@ -32,12 +32,12 @@ git clone https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp
 cd visao-computacional
 ```
 
-3. Instale as dependências do projeto:
+3. Instale as [dependências][Serverless Framework] do projeto:
 ```bash
 npm install -g serverless
 ```
 
-4. Configure as credenciais da AWS:
+4. Configure as [credenciais da AWS][Credenciais AWS]:
 ```bash
 serverless config credentials --provider aws --key SUA_ACCESS_KEY --secret SUA_SECRET_KEY
 ```
@@ -47,9 +47,16 @@ serverless deploy
 ```
 6. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
 
+## Funcionamento
+A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao AWS Rekognition e ao S3. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
 
+## Estrutura do projeto
+O projeto segue a estrutura padrão do framework Serverless e está organizado da seguinte forma:
 
-
+serverless.yml: arquivo de configuração do Serverless Framework, que define as funções Lambda, eventos, políticas de permissão e outros recursos.
+src/: diretório contendo o código-fonte das lambdas.
+src/handlers/: diretório contendo os manipuladores das requisições.
+src/services/: diretório contendo os serviços auxiliares, como integração com o Rekognition e S3.
 
 
 
@@ -69,6 +76,14 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
 ## Dificuldades Conhecidas
 
 ## Referências
+- [Amazon Rekognition][Amazon Rekognition]
+- [Serverless Framework][Serverless Framework]
+- [Credenciais AWS][Credenciais AWS]
+- <https://github.com/rjsabia/captionApp> (JS)
+- <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/labels.html> (Trabalhando com Rótulos)
+- <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html> (Exemplos de código)
+- <https://docs.aws.amazon.com/rekognition/latest/dg/faces-detect-images.html> (Trabalhando com Faces)
+- <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html> (Exemplos de código)
 
 ----------
 
@@ -80,7 +95,9 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
    [compass]: <https://compass.uol/en/home/>
    [aws]: <https://aws.amazon.com/pt/>
    [sprint8main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/tree/main>
-
+   [Amazon Rekognition]: <https://aws.amazon.com/pt/rekognition/>
+   [Serverless Framework]: <https://www.serverless.com/framework/docs/getting-started>
+   [Credenciais AWS]: <https://www.serverless.com/framework/docs/providers/aws/guide/credentials/>
 ***
 
 
