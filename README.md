@@ -4,6 +4,21 @@
 
 ## Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
+## 📌 Navegação
+
+- [📝 Introdução](#introdução)
+- [🎯 Objetivo](#objetivo)
+- [💻 Desenvolvimento](#desenvolvimento)
+  * [🔧 Requisitos](#requisitos)
+  * [🔧 Ferramentas e tecnologias utilizadas](#feramentas-e-tecnologias-utilizadas)
+- [📏 Execução](#execução)
+- [📈Resultados](#resultado)
+- [📋 Organização](#organização)
+- [🤷 Dificuldades](#dificuldades)
+- [👥 Equipe](#equipe)
+
+---
+
 ## Introdução
 
 _Escrever uma breve introdução a respeito de funções lambda, regoknition e api gateway_
