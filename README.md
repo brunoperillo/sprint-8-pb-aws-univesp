@@ -12,9 +12,10 @@
   * [🔧 Requisitos](#requisitos)
   * [🔧 Ferramentas e tecnologias utilizadas](#feramentas-e-tecnologias-utilizadas)
 - [📏 Execução](#execução)
-- [📈Resultados](#resultado)
-- [📋 Organização](#organização)
-- [🤷 Dificuldades](#dificuldades)
+- [📈 Resultados](#resultado)
+- [✅ Conclusão](#conclusão)
+  * [📋 Organização](#organização)
+  * [🤷 Dificuldades](#dificuldades)
 - [👥 Equipe](#equipe)
 
 ---
@@ -272,7 +273,19 @@ Os logs de chamadas da API são registrados no Amazon CloudWatch, permitindo uma
 
 ## Conclusão
 
-## Dificuldades
+O projeto de detecção de rótulos e emoções em faces utilizando serviços da AWS oferece uma solução eficiente e escalável para processamento de imagens. A API desenvolvida, combinando funções Lambda, a API Amazon Rekognition e o Amazon CloudWatch, possibilita a detecção de informações valiosas a partir de imagens inseridas no bucket S3.
+
+### Organização
+
+Foram feitas reuniões afim de examinar o desenvolvimento do projeto, para que todos os membros estivessem a par do código desenvolvido e para que as dúvidas e dificuldades fossem compartilhadas e resolvidas.
+
+### Dificuldades
+
+Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas e superadas. Algumas delas incluem:
+
+ - Configuração adequada das permissões de acesso aos serviços da AWS, garantindo a segurança e a correta utilização dos recursos.
+
+ - Tratamento adequado de erros e falhas na detecção de rótulos e emoções, visando fornecer uma experiência consistente e confiável.
 
 ---
 
