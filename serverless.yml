@@ -33,7 +33,7 @@ functions:
           path: /v2
           method: get
   v1Vision:
-    handler: src/handler.v1_vision
+    handler: src/vision1.v1_vision
     events:
       - httpApi:
           path: /v1/vision

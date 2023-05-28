@@ -2,7 +2,6 @@ import boto3
 import json
 from .utils import get_image_creation_date
 
-
 def v2_vision(event, context):
     
     request_body = json.loads(event['body'])
