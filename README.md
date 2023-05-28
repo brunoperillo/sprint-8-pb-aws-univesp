@@ -1,7 +1,11 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
-## 📗Programa de Bolsas Compass UOL - Formação em Machine Learning com AWS
+###  Programa de Bolsas Compass UOL - Formação em Machine Learning com AWS
 ***
-# Grupo 3
+<div align="center">
+ <img src= "https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/assets/88354075/64187a38-281e-4287-afcc-dd9ec97be1ff" alt="capa github" 
+  width="450"/>
+</div>
+
 
 
 ***
@@ -28,6 +32,7 @@ e com recursos avançados de análise visual.
 
 ## Funcionamento 
 
+Formatação dos campos de entrada e saída da API, foi defindo os códigos de status adequados para sucesso e erro
 ****
 
 ## Organização
