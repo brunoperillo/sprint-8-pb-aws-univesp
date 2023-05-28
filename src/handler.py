@@ -1,4 +1,4 @@
-import json
+from .utils import create_http_response
 
 def health(event, context):
     body = {
@@ -6,7 +6,7 @@ def health(event, context):
         "input": event,
     }
 
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    response = create_http_response(200, body)
 
     return response
 
@@ -15,7 +15,7 @@ def v1_description(event, context):
         "message": "VISION api version 1."
     }
 
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    response = create_http_response(200, body)
 
     return response
 
@@ -24,6 +24,7 @@ def v2_description(event, context):
         "message": "VISION api version 2."
     }
 
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    response = create_http_response(200, body)
 
     return response
+

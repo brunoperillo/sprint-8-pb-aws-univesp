@@ -64,7 +64,7 @@ def v2_vision(event, context):
             'created_image': get_image_creation_date(bucket, imageName),  
             'faces': faces
         }
-    
+    #Imprime o resultado nos logs do CloudWatch
     print(result)
     
     # Retornar uma resposta HTTP válida
