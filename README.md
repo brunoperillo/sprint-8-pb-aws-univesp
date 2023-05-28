@@ -80,6 +80,7 @@ Formato da requisião (POST):
   "bucket": "myphotos",
   "imageName": "test-happy.jpg"
 }
+```
 
 Exemplos de resultados obtidos:
 
