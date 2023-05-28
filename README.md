@@ -10,7 +10,7 @@
 
 ***
  
-## Introdução do Projeto
+## Introdução 
 
 Nessa Sprint foram abordados os serviços das *funções Lambda*, o *Rekognition*, *CloudWatch* e *API Gateway*. 
 
@@ -32,7 +32,15 @@ e com recursos avançados de análise visual.
 
 ## Funcionamento 
 
-Formatação dos campos de entrada e saída da API, foi defindo os códigos de status adequados para sucesso e erro
+Para usar o Amazon Rekognition, é necessário formatar corretamente os campos de entrada e saída da API, além de definir os códigos de status adequados para sucesso e erro. 
+ *imagem da funçãoo
+
+
+Os dados da imagem são enviados no corpo da solicitação como um JSON, com o campo Image contendo um objeto Bytes que contém os bytes da imagem. 
+A resposta da API será verificada quanto ao código de status HTTP.
+
+Se for 200, a solicitação foi bem-sucedida e o resultado é impresso. Caso contrário, um erro ocorreu e o código de status e o conteúdo da resposta são impressos.
+
 ****
 
 ## Organização
@@ -44,45 +52,6 @@ Formatação dos campos de entrada e saída da API, foi defindo os códigos de s
 
 ## Desenvolvedores do projeto
 
-|| <br><sub>  [<img src="https://avatars.githubusercontent.com/u/96358027?v=4"  width=115><br><sub>Diego</sub>](https://github.com/Diegox0301) | [<img src="https://avatars.githubusercontent.com/u/124359272?v=4" width=115><br><sub>Irati Gonçalves Maffra</sub>](https://github.com/IratiMaffra) | [<img src="https://avatars.githubusercontent.com/u/88354075?v=4" width=115><br><sub>Kelly Silva</sub>](https://github.com/KellyPLSilva) | [<img src="https://avatars.githubusercontent.com/u/117780664?v=4" width=115><br><sub>Viviane Alves</sub>](https://github.com/Vivianes86) |
+||<br><sub>  [<img src="https://avatars.githubusercontent.com/u/96358027?v=4"  width=115><br><sub>Diego Lopes </sub>](https://github.com/Diegox0301) | [<img src="https://avatars.githubusercontent.com/u/124359272?v=4" width=115><br><sub>Irati Gonçalves Maffra</sub>](https://github.com/IratiMaffra) | [<img src="https://avatars.githubusercontent.com/u/88354075?v=4" width=115><br><sub>Kelly Patricia Lopes Silva</sub>](https://github.com/KellyPLSilva) | [<img src="https://avatars.githubusercontent.com/u/117780664?v=4" width=115><br><sub>Viviane Alves</sub>](https://github.com/Vivianes86) |
 | :---: | :---: | :---: |:---: |:---: |
 
-
-
-## Observações retorno esperado
-
-- os campos de entrada e saida deverão estar nos formatos e com os nomes apresentados.
-- status code para sucesso da requisição será `200`
-- status code para erros deverá ser `500`
-
-
-***
-
-## O que será avaliado?
-
-- Projeto em produção na AWS
-- Em Python conforme projeto base disponibilizado
-- Seguir as atividades na ordem proposta
-- Sobre as rotas:
-  - Possuir em cada rota os retornos esperados (somente campos solicitados e **exatamente** no formato conforme especificação)
-- Infra-estrutura como código (evite ações manuais na console)
-- Organização geral do código fonte
-  - Estrutura de pastas
-  - Estrutura da logica de negócio
-  - Divisão de responsabilidades em arquivos/pastas distintos
-  - Otimização do código fonte (evitar duplicações de código)
-- Objetividade do README.md
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-8-pb-aws-univesp;
-- **O trabalho deve ser feito em grupos de 4 integrantes**;
-  - Não repetir formação de grupos já criados em sprints anteriores;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um README.md;
-  - Documentar detalhes sobre como a avaliação foi desenvolvida;
-  - Dificuldades conhecidas;
-  - Como utilizar o sistema;
-- O prazo de entrega é até às 12h do dia 29/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp)).
