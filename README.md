@@ -71,7 +71,7 @@ O projeto segue a estrutura padrão do framework Serverless e está organizado d
 O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre os integrantes. O README.md foi escrito de forma objetiva e clara para facilitar a compreensão do projeto.
 
 ## Ferramentas utilizadas
-- [AWS][aws] ([Lambda][Amazon Lambda], [S3][Amazon S3], [Rekognition][Amazon Rekognition], [CloudWatch][Amazon CloudWatch] e [IAM][Amazon IAM])
+- [AWS][aws] ([Lambda][Amazon Lambda], [S3][Amazon S3], [Rekognition][Amazon Rekognition], [API Gateway][API Gateway], [CloudWatch][Amazon CloudWatch] e [IAM][Amazon IAM])
 - [Serverless Framework][Serverless Framework]
 - VSCode
 - GitHub
@@ -84,6 +84,7 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
 - [AWS IAM][Amazon IAM]
 - [AWS Lambda][Amazon Lambda]
 - [AWS CloudWatch][Amazon CloudWatch]
+- [API Gateway][API Gateway]
 - [Serverless Framework][Serverless Framework]
 - [Credenciais AWS][Credenciais AWS]
 - <https://github.com/rjsabia/captionApp> (JS)
@@ -104,6 +105,7 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
    [Amazon Rekognition]: <https://aws.amazon.com/pt/rekognition/>
    [Amazon S3]: <https://aws.amazon.com/pt/s3/>
    [Amazon IAM]: <https://aws.amazon.com/pt/iam/>
+   [API Gateway]: <https://aws.amazon.com/pt/api-gateway>
    [Amazon Lambda]: <https://aws.amazon.com/pt/lambda/>
    [Amazon CloudWatch]: <https://aws.amazon.com/pt/cloudwatch/>
    [Serverless Framework]: <https://www.serverless.com/framework/docs/getting-started>
