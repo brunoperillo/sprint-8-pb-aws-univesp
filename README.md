@@ -12,13 +12,16 @@
  
 ## Introdução 
 
-Nessa Sprint foram abordados os serviços das *funções Lambda*, o *Rekognition*, *CloudWatch* e *API Gateway*. 
+A inteligência artifical é um campo da Ciência da Computação que busca desenvolver algoritmos e modelos que possam aprender, raciocinar, tomar decisões e resolver problemas de maneira autônoma, sem intervenção humana direta.
 
-Com as funções Lambda são uma forma de executar código sem precisar gerenciar servidores, o Rekognition é um serviço de análise de imagem e vídeo baseado em aprendizado de máquina
-(para esse projeto foi usado apenas imagens), e o API Gateway é uma plataforma para criar, gerenciar e proteger APIs. O CloudWatch foi utilizado para monitorar e registrar métricas, logs e eventos em tempo real, fornecendo insights sobre o desempenho dos recursos e serviços da AWS.
+Um dos ramos é area de visão computacional, que busca capacitar os sistemas a interpretarem e compreenderem informações visuais, como imagens e vídeos.
 
-Esses serviços, quando combinados, permitem o desenvolvimento de aplicativos escaláveis, seguros
-e com recursos avançados de análise visual.
+Para o desenvolvimento dessa Sprint foi utilizado técnicas de aprendizado de máquina e redes neurais através dos serviços das AWS  *funções Lambda*, *o Rekognition*, *CloudWatch* e *API Gateway*. 
+
+Com as funções Lambda são uma forma de executar código sem precisar gerenciar servidores, o Rekognition é um serviço de análise de imagem e vídeo baseado em aprendizado de máquina (para esse projeto foi usado apenas imagens), e o API Gateway é uma plataforma para criar, gerenciar e proteger APIs.
+O CloudWatch foi utilizado para monitorar e registrar métricas, logs e eventos em tempo real, fornecendo insights sobre o desempenho dos recursos e serviços da AWS.
+
+Esses serviços, quando combinados, permitem o desenvolvimento de aplicativos escaláveis, seguros e com recursos avançados de análise visual, tornando-se uma ferramenta valiosa para empresas e desenvolvedores que desejam incorporar análise visual em suas aplicações e processos de tomada de decisão.
 
 
 
@@ -27,7 +30,7 @@ e com recursos avançados de análise visual.
 
 ## Objetivo
 
-É criar rotas para APIs poderem trabalhar com o serviços Rekognition, trazendo informações das imagens carregadas no buket S3.
+Desenvolver função Lambdas para chamar os serviços Rekognition e CloudWatch para realizar análise de imagens carregadas no buket S3.
 ***
 
 ## Funcionamento 
@@ -45,9 +48,14 @@ Se for 200, a solicitação foi bem-sucedida e o resultado é impresso. Caso con
 
 ## Organização
 
+O projeto foi desenvolvido em duas frentes, parte do grupo ficou com a organização e desenvolvimento na AWS Rekognition e outra parte ficou para desenvolver o conteúdo do README. 
+
 *** 
 
 ## Dificuldades Conhecidas
+
+
+
 
 
 ## Desenvolvedores do projeto
