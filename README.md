@@ -2,12 +2,11 @@
 
 Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compass] para formação em *machine learning* com [AWS][aws]. [Diretrizes do pedido][sprint8main] 
 ***
-# Status do projeto
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
 
-# Visão Computacional com AWS Rekognition
+<div align="center">
+  <h1 style="font-size: 32px;"><b>Visão Computacional com AWS Rekognition</b></h1>
+</div>
+
 
 ## Introdução
 A visão computacional, também conhecida como reconhecimento visual ou percepção visual, é um campo de estudo que se concentra em permitir que os computadores obtenham uma compreensão de alto nível de imagens e vídeos digitais. Envolve o desenvolvimento de algoritmos e técnicas para extrair informações significativas e fazer inferências a partir de dados visuais.
