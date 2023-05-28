@@ -22,7 +22,12 @@
 
 ## Introdução
 
-_Escrever uma breve introdução a respeito de funções lambda, regoknition e api gateway_
+Segue breve descrição da stack utilizada no projeto, para mais informações sobre as ferramentas clique nos links.<br>
+As funções [AWS lambda](https://aws.amazon.com/pt/lambda/features/#:~:text=O%20AWS%20Lambda%20permite%20que,ou%20se%20movem%20na%20nuvem.) permitem o desenvolvimento sem servidor (`serverless`) que responde a eventos os quais gerenciam recursos computacionais de forma automática na plataforma [AWS](https://aws.amazon.com/pt/free/?trk=e4d1a24a-13d1-4019-b365-e284fded1202&sc_channel=ps&ef_id=Cj0KCQjw98ujBhCgARIsAD7QeAgbJoMeVNuttyLRkZ61Suir6oTSIKY_CqV3Cb-DXmpaCKiCN0sjpSEaAqTOEALw_wcB:G:s&s_kwcid=AL!4422!3!454435137069!e!!g!!aws!10758390150!106168762236&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all).<br>
+A ferramenta  [Amazon Rekognition](https://aws.amazon.com/pt/rekognition/) que oferece recursos de visão computacional pré-treinados, pode entre outros serviços, realizar a identificação de objetos e classificar o sentimento de rostos nas imagens fornecidas a ele. <br>
+O [Amazon API Gateway](https://aws.amazon.com/pt/api-gateway/) permite que desenvolvedores criem, publiquem, mantenham e monitorem APIs com facilidade, elas agem como "porta de entrada" para aplicativos acessarem dados, lógica de negócios ou funcionalidade de seus serviços de back-end.<br>
+O framework [serverless](https://www.serverless.com/) facilita o desenvolvimento de projetos sem servidor permitindo a realizações de testes locais da aplicação e a fazer o deploy do projeto na plataforma da AWS através da CLI.
+
 
 ---
 
