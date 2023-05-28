@@ -67,6 +67,33 @@ O projeto segue a estrutura padrão do framework Serverless e está organizado d
 - src/handlers/: diretório contendo os manipuladores das requisições.
 - src/services/: diretório contendo os serviços auxiliares, como integração com o [Rekognition][Amazon Rekognition] e [S3][Amazon S3].
 
+## Implementação da solução
+
+### Detecção facial (Rota /v2/vision)
+
+Foi criada uma função em python para acessar uma imagem salva num bucket do S3, acionar o Rekognition para análise facial, e retornar o *bounding box* da(s) face(s) detectada(s) e a expressão facial de maior índice de confiança.
+
+Formato da requisião (POST):
+
+```json
+{
+  "bucket": "myphotos",
+  "imageName": "test-happy.jpg"
+}
+
+Exemplos de resultados obtidos:
+
+<table>
+  <tr>
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/25699466?v=4" alt="Foto Bruno" width="100%">
+    </td>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bruno.png?raw=true" alt="Analise facial Bruno" width="80%">
+    </td>
+  </tr>
+</table>
+
 ## Organização
 O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre os integrantes. O README.md foi escrito de forma objetiva e clara para facilitar a compreensão do projeto.
 
