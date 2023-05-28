@@ -16,6 +16,21 @@ Uma ferramenta poderosa no campo da visão computacional é o [AWS Rekognition][
 ## Objetivo
 Disponibilizar uma solução pronta para produção na AWS, capaz de receber requisições de imagens, extrair informações relevantes por meio do [AWS Rekognition][Amazon Rekognition] e retornar os resultados de forma estruturada, atendendo às especificações e formatos esperados para cada rota da API.
 
+## Funcionamento
+A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao [AWS Rekognition][Amazon Rekognition] e ao [S3][Amazon S3]. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
+
+A arquitetura geral do projeto é a seguinte:
+
+1. O usuário fornece uma imagem que é enviada para o serviço S3, que é um serviço de armazenamento de objetos da AWS.
+2. O API Gateway, que atua como ponto de entrada da aplicação, recebe a requisição HTTP com a imagem.
+3. O API Gateway encaminha a requisição para a função Lambda correspondente.
+4. A função Lambda é responsável por processar a imagem recebida e invocar o serviço Rekognition da AWS.
+5. O serviço Rekognition, utilizando técnicas de visão computacional, extrai informações da imagem, como rótulos (tags) que descrevem o conteúdo da imagem e emoções identificadas nas faces presentes na imagem.
+6. A função Lambda recebe a resposta do Rekognition e realiza o log dos resultados no serviço CloudWatch.
+7. A resposta final contendo as informações processadas é retornada ao API Gateway.
+8. O API Gateway envia a resposta ao usuário que fez a requisição.
+
+
 ## Requisitos
 - Node.js (versão 10 ou superior)
 - Acesso à AWS (para implantar a solução)
