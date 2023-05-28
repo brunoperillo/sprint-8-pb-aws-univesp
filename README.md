@@ -184,32 +184,35 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 
 ## Tratamento de erros
 
-Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta esperada deverá retornar os campos de `position` iguais "null" e código de erro igual a _500_, conforme exemplo:
+A API possui um tratamento adequado de erros, visando fornecer respostas claras e informativas em caso de ocorrência de problemas durante o processamento das imagens.
+- Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta esperada deverá retornar os campos de `position` iguais "null" e código de erro igual a _500_, conforme exemplos:
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-null.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a> -
+  <sub>
+    <p style="padding: 10px">Envio da imagem de um gato para o reconhecimento de faces, a resposta retorna como `null`</p>
+  </sub>
 </div>
 
-<br>
-
-Neste caso passamos a imagem de um gato para o reconhecimento de faces, a resposta para as faces localizadas retornará `null`
-
-Já quando fazemos envio de uma requisição com o body incorreto, a mensagem de erro com código _500_ deverá ser retornada:
+- Quando é feito envio de uma requisição com o body incorreto, a mensagem de erro com código _500_ deverá ser retornada:
 
 <div align="center">
-  <img src="./assets/result_imgs/v2-vision-error2.png">
-  <sub>Envio de uma requisição com `json` incorreto</sub>
+  <img src="./assets/result_imgs/v2-vision-error2.png"> - 
+  <sub>
+    <p style="padding: 10px">Envio de uma requisição com `json` incorreto</p>
+  </sub>
 </div>
 
-<br>
-
-O envio de uma requisição com uma imagem não presente no bucket selecionado também retornará erro:
+- O envio de uma requisição com uma imagem não presente no bucket selecionado também retornará erro:
 
 <div align="center">
-  <img src="./assets/result_imgs/v2-vision-error.png">
-  <sub>Arquivo não presente no bucket selecionado</sub>
+  <img src="./assets/result_imgs/v2-vision-error.png"> -
+  <sub>
+    <p style="padding: 10px">Arquivo não presente no bucket selecionado</p>
+  </sub>
 </div>
+
 
 ---
 
