@@ -32,7 +32,11 @@ A arquitetura geral do projeto é a seguinte:
 
 Dessa maneira essa será a arquitetura a ser impantada em TODA ATIVIDADE será:
 
-![arquitetura-base](./assets/arquitetura-base.png)
+<p align="center">
+  <img src="./assets/arquitetura-base.png" alt="arquitetura-base" width="800">
+</p>
+
+
 
 ## Requisitos
 - Node.js (versão 10 ou superior)
