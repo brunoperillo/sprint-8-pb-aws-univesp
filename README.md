@@ -148,9 +148,9 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 
 <div align="center">
   <img src="./assets/result_imgs/v1-vision.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a> -
-  <sub>
-    <p style="padding: 10px">Neste exemplo, a API detectou os seguintes rótulos: "cat", "mammal", "pet" e "wood".</p>
+   <sub>
+    <p style="padding: 10px">Exemplo 1: a API detectou os seguintes rótulos: "cat", "mammal", "pet" e "wood".</p>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
   </sub>
 </div>
 
@@ -162,9 +162,9 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a> -
-  <sub>
-    <p style="padding: 10px">Neste exemplo, foi detectada a emoção: "angry" e accurácia.</p>
+   <sub>
+    <p style="padding: 10px">Exemplo 2: foi detectada a emoção: "angry" e accurácia.</p>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
   </sub>
 </div>
 
@@ -174,9 +174,9 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-varias.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a> -
   <sub>
-    <p style="padding: 10px">Neste exemplo, foi detectada as seguintes emoções: "surprised", "angry", "happy" e a accurácia de cada.</p>
+    <p style="padding: 10px">Exemplo 3: foi detectada as seguintes emoções: "surprised", "angry", "happy" e a accurácia de cada.</p>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
   </sub>
 </div>
 
@@ -189,30 +189,33 @@ A API possui um tratamento adequado de erros, visando fornecer respostas claras 
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-null.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a> -
   <sub>
     <p style="padding: 10px">Envio da imagem de um gato para o reconhecimento de faces, a resposta retorna como `null`</p>
+    <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
   </sub>
 </div>
+
+<br>
 
 - Quando é feito envio de uma requisição com o body incorreto, a mensagem de erro com código _500_ deverá ser retornada:
 
 <div align="center">
-  <img src="./assets/result_imgs/v2-vision-error2.png"> - 
+  <img src="./assets/result_imgs/v2-vision-error2.png"> 
   <sub>
     <p style="padding: 10px">Envio de uma requisição com `json` incorreto</p>
   </sub>
 </div>
 
+<br>
+
 - O envio de uma requisição com uma imagem não presente no bucket selecionado também retornará erro:
 
 <div align="center">
-  <img src="./assets/result_imgs/v2-vision-error.png"> -
+  <img src="./assets/result_imgs/v2-vision-error.png">
   <sub>
     <p style="padding: 10px">Arquivo não presente no bucket selecionado</p>
   </sub>
 </div>
-
 
 ---
 
