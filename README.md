@@ -30,6 +30,9 @@ A arquitetura geral do projeto é a seguinte:
 7. A resposta final contendo as informações processadas é retornada ao API Gateway.
 8. O API Gateway envia a resposta ao usuário que fez a requisição.
 
+Dessa maneira essa será a arquitetura a ser impantada em TODA ATIVIDADE será:
+
+![arquitetura-base](./assets/arquitetura-base.png)
 
 ## Requisitos
 - Node.js (versão 10 ou superior)
@@ -71,8 +74,8 @@ serverless deploy
 ```
 7. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
 
-## Funcionamento
-A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao [AWS Rekognition][Amazon Rekognition] e ao [S3][Amazon S3]. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
+O projeto é dividido em duas partes, com rotas diferentes, nomeadamente de Parte 1 e Parte 2
+
 
 ## Estrutura do projeto
 O projeto segue a estrutura padrão do framework Serverless e está organizado da seguinte forma:
