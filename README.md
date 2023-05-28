@@ -221,44 +221,49 @@ A API possui um tratamento adequado de erros, visando fornecer respostas claras 
 
 ## Visualizando logs no AWS CloudWatch
 
-### Rota POST /v1/vision
+Os logs de chamadas da API são registrados no Amazon CloudWatch, permitindo uma visualização detalhada do fluxo de execução e eventuais erros ocorridos. Através da interface do CloudWatch, é possível acessar os logs relacionados à API e analisar as informações registradas.
+
+### Exemplos:
+
+#### Rota POST /v1/vision
 
 <div align="center" style="padding: 40px;">
   <img src="./assets/result_imgs/v1-Cloudwatch.png">
   <sub>
-    Requisição da rota /v1/vision <br>
+    <p style="padding: 10px">Requisição da rota /v1/vision</p>
     <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
   </sub>
 </div>
 
-### Rota POST /v2/vision
+#### Rota POST /v2/vision
 
 <div align="center" style="padding: 40px;">
   <img src="./assets/result_imgs/v2-Cloudwatch.png">
   <sub>
-    Requisição da rota /v2/vision com uma emoção detectada<br>
+  <p style="padding: 10px">Requisição da rota /v2/vision com uma emoção detectada</p>
     <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
   </sub>
 </div>
 
-### Rota POST /v2/vision
+
+#### Rota POST /v2/vision
 
 <div align="center" style="padding: 40px;">
   <img src="./assets/result_imgs/v2-variasCloudwatch.png">
   <sub>
-    Requisição da rota /v2/vision com várias emoções detectadas<br>
+    <p style="padding: 10px">Requisição da rota /v2/vision com várias emoções detectadas</p>
     <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
   </sub>
 </div>
 
 <br>
 
-### Rota POST /v2/vision com erro
+#### Rota POST /v2/vision com erro
 
 <div align="center" style="padding: 40px;">
   <img src="./assets/result_imgs/v2-nullCloudwatch.png">
   <sub>
-    Requisição da rota /v2/vision passando uma imagem sem faces<br>
+    <p style="padding: 10px">Requisição da rota /v2/vision passando uma imagem sem faces</p>
     <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
   </sub>
 </div>
