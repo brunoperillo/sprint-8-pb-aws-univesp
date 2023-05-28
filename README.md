@@ -9,25 +9,28 @@
 - [📝 Introdução](#introdução)
 - [🎯 Objetivo](#objetivo)
 - [💻 Desenvolvimento](#desenvolvimento)
-  * [🔧 Requisitos](#requisitos)
-  * [🔧 Ferramentas e tecnologias utilizadas](#feramentas-e-tecnologias-utilizadas)
+  - [🔧 Requisitos](#requisitos)
+  - [🔧 Ferramentas e tecnologias utilizadas](#feramentas-e-tecnologias-utilizadas)
 - [📏 Execução](#execução)
 - [📈 Resultados](#resultado)
 - [✅ Conclusão](#conclusão)
-  * [📋 Organização](#organização)
-  * [🤷 Dificuldades](#dificuldades)
+  - [📋 Organização](#organização)
+  - [🤷 Dificuldades](#dificuldades)
 - [👥 Equipe](#equipe)
 
 ---
 
 ## Introdução
 
-Segue breve descrição da stack utilizada no projeto, para mais informações sobre as ferramentas clique nos links.<br>
-As funções [AWS lambda](https://aws.amazon.com/pt/lambda/features/#:~:text=O%20AWS%20Lambda%20permite%20que,ou%20se%20movem%20na%20nuvem.) permitem o desenvolvimento sem servidor (`serverless`) que responde a eventos os quais gerenciam recursos computacionais de forma automática na plataforma [AWS](https://aws.amazon.com/pt/free/?trk=e4d1a24a-13d1-4019-b365-e284fded1202&sc_channel=ps&ef_id=Cj0KCQjw98ujBhCgARIsAD7QeAgbJoMeVNuttyLRkZ61Suir6oTSIKY_CqV3Cb-DXmpaCKiCN0sjpSEaAqTOEALw_wcB:G:s&s_kwcid=AL!4422!3!454435137069!e!!g!!aws!10758390150!106168762236&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all).<br>
-A ferramenta  [Amazon Rekognition](https://aws.amazon.com/pt/rekognition/) que oferece recursos de visão computacional pré-treinados, pode entre outros serviços, realizar a identificação de objetos e classificar o sentimento de rostos nas imagens fornecidas a ele. <br>
-O [Amazon API Gateway](https://aws.amazon.com/pt/api-gateway/) permite que desenvolvedores criem, publiquem, mantenham e monitorem APIs com facilidade, elas agem como "porta de entrada" para aplicativos acessarem dados, lógica de negócios ou funcionalidade de seus serviços de back-end.<br>
-O framework [serverless](https://www.serverless.com/) facilita o desenvolvimento de projetos sem servidor permitindo a realizações de testes locais da aplicação e a fazer o deploy do projeto na plataforma da AWS através da CLI.
+A seguir, apresentamos uma breve descrição da stack utilizada no projeto, com links para obter mais informações sobre as ferramentas mencionadas.
 
+As funções do [AWS lambda](https://aws.amazon.com/pt/lambda/features/#:~:text=O%20AWS%20Lambda%20permite%20que,ou%20se%20movem%20na%20nuvem.) permitem o desenvolvimento sem servidor (_serverless_), respondendo a eventos e gerenciando recursos computacionais automaticamente na plataforma AWS. Para mais informações sobre essa ferramenta, [clique aqui](https://aws.amazon.com/pt/free/?trk=e4d1a24a-13d1-4019-b365-e284fded1202&sc_channel=ps&ef_id=Cj0KCQjw98ujBhCgARIsAD7QeAgbJoMeVNuttyLRkZ61Suir6oTSIKY_CqV3Cb-DXmpaCKiCN0sjpSEaAqTOEALw_wcB:G:s&s_kwcid=AL!4422!3!454435137069!e!!g!!aws!10758390150!106168762236&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all).
+
+O [Amazon Rekognition](https://aws.amazon.com/pt/rekognition/) é uma ferramenta poderosa de visão computacional pré-treinada. Além de oferecer uma variedade de recursos, ela é capaz de identificar objetos e classificar o sentimento de rostos em imagens fornecidas a ela.
+
+O [Amazon API Gateway](https://aws.amazon.com/pt/api-gateway/) permite que os desenvolvedores criem, publiquem, mantenham e monitorem APIs com facilidade. Essas APIs atuam como uma "porta de entrada" para os aplicativos acessarem dados, lógica de negócios ou funcionalidades de serviços de back-end.
+
+O framework [Serverless](https://www.serverless.com/) permite que os desenvolvedores criem, publiquem, mantenham e monitorem APIs com facilidade. Essas APIs atuam como uma "porta de entrada" para os aplicativos acessarem dados, lógica de negócios ou funcionalidades de serviços de back-end.
 
 ---
 
@@ -52,9 +55,9 @@ Foi desenvolvida uma API que faz a detecção de rótulos ou de emoções em fac
 
 ### Ferramentas e tecnologias utilizadas
 
-* AWS Lambda para manipulação de funções
-* AWS S3 Para armazenamento de imagens
-* AWS API Gateway para requisições GET e POST
+* AWS Lambda para execução de funções
+* AWS S3 para armazenamento de imagens
+* AWS API Gateway para manipular requisições GET e POST
 * AWS Regoknition para identificação de rótulos e faces
 
 Clone este repositório e instale o [framework serverless](https://www.serverless.com/framework/docs/getting-started)
@@ -148,7 +151,7 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 
 - Fazendo requisições `POST` para a rotas /v1/vision e /v2/vision e inserindo no body da requisição o nome do bucket e o nome da imagem é possível obter os resultados.
 
-### Exemplos abaixo:
+### Exemplos abaixo
 
 #### POST /v1/vision
 
@@ -191,6 +194,7 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 ## Tratamento de erros
 
 A API possui um tratamento adequado de erros, visando fornecer respostas claras e informativas em caso de ocorrência de problemas durante o processamento das imagens.
+
 - Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta esperada deverá retornar os campos de `position` iguais "null" e código de erro igual a _500_, conforme exemplos:
 
 <div align="center">
@@ -229,7 +233,7 @@ A API possui um tratamento adequado de erros, visando fornecer respostas claras 
 
 Os logs de chamadas da API são registrados no Amazon CloudWatch, permitindo uma visualização detalhada do fluxo de execução e eventuais erros ocorridos. Através da interface do CloudWatch, é possível acessar os logs relacionados à API e analisar as informações registradas.
 
-### Exemplos:
+### Exemplos
 
 #### Rota POST /v1/vision
 
@@ -250,7 +254,6 @@ Os logs de chamadas da API são registrados no Amazon CloudWatch, permitindo uma
     <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
   </sub>
 </div>
-
 
 #### Rota POST /v2/vision
 
