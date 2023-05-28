@@ -1,5 +1,6 @@
 import boto3
 import json
+from utils import get_image_creation_date
 
 def v2_vision(event, context):
     
@@ -22,7 +23,7 @@ def v2_vision(event, context):
         Attributes=['ALL']  # Retorna todos os atributos das faces detectadas
     )
     
-    # Verificar se há faces detectadas na imagem
+    # Verifica se foi detectada alguma face na imagem. Em caso negativo, responde à requisição com o formato especificado
     if len(response['FaceDetails']) == 0:
         result = {
             'url_to_image': url_to_image,
@@ -41,7 +42,7 @@ def v2_vision(event, context):
             ]
         }
     else:
-        # Extrair as informações das faces detectadas
+        # Caso haja face na imagem, extrai as informações da(s) face(s) detectada(s)
         faces = []
         for face in response['FaceDetails']:
             face_info = {
@@ -56,9 +57,11 @@ def v2_vision(event, context):
             }
             faces.append(face_info)
 
+        #'created_image': '02-02-2023 17:00:00',
+
         result = {
             'url_to_image': url_to_image,
-            'created_image': '02-02-2023 17:00:00',
+            'created_image': get_image_creation_date(bucket, imageName),  
             'faces': faces
         }
     
@@ -75,3 +78,22 @@ def v2_vision(event, context):
         
     return response
 
+'''
+def get_image_creation_date(bucket, imageName):
+    """
+    Obtém a data de criação de uma imagem no bucket do Amazon S3.
+
+    Args:
+        bucket (str): Nome do bucket do Amazon S3.
+        imageName (str): Nome da imagem.
+
+    Returns:
+        str: Data de criação da imagem no formato '%d-%m-%Y %H:%M:%S'.
+    """
+    s3 = boto3.client('s3')
+    
+    response = s3.head_object(Bucket=bucket, Key=imageName)
+    creation_date = response['LastModified'].strftime('%d-%m-%Y %H:%M:%S')
+    
+    return creation_date
+'''
