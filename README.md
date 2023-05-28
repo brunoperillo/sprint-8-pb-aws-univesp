@@ -63,10 +63,10 @@ A solução utiliza o framework Serverless para criar um conjunto de lambdas que
 ## Estrutura do projeto
 O projeto segue a estrutura padrão do framework Serverless e está organizado da seguinte forma:
 
-serverless.yml: arquivo de configuração do Serverless Framework, que define as funções Lambda, eventos, políticas de permissão e outros recursos.
-src/: diretório contendo o código-fonte das lambdas.
-src/handlers/: diretório contendo os manipuladores das requisições.
-src/services/: diretório contendo os serviços auxiliares, como integração com o [Rekognition][Amazon Rekognition] e [S3][Amazon S3].
+- serverless.yml: arquivo de configuração do Serverless Framework, que define as funções Lambda, eventos, políticas de permissão e outros recursos.
+- src/: diretório contendo o código-fonte das lambdas.
+- src/handlers/: diretório contendo os manipuladores das requisições.
+- src/services/: diretório contendo os serviços auxiliares, como integração com o [Rekognition][Amazon Rekognition] e [S3][Amazon S3].
 
 ## Organização
 O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre os integrantes. O README.md foi escrito de forma objetiva e clara para facilitar a compreensão do projeto.
