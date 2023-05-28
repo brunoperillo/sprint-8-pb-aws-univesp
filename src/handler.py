@@ -78,6 +78,7 @@ def v1_vision(event, context):
         
     return response
 
+'''
 def v2_vision(event, context): 
 # https://docs.aws.amazon.com/rekognition/latest/dg/faces-detect-images.html
     
@@ -132,3 +133,4 @@ def v2_vision(event, context):
     }
         
     return response
+'''

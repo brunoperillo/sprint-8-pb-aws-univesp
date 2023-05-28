@@ -10,10 +10,8 @@ def v2_vision(event, context):
     
     url_to_image = f"https://{bucket}/{imageName}"
     
-    # Conectar-se ao AWS Rekognition
+    # Conectar-se ao AWS Rekognition e seleciona o serviço de detecção de faces
     rekognition = boto3.client('rekognition')
-    
-    # Executar a detecção de faces na imagem
     response = rekognition.detect_faces(
         Image={
             'S3Object': {
