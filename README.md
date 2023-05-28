@@ -7,12 +7,52 @@ Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compa
     :construction:  Projeto em construção  :construction:
 </h4>
 
+# Visão Computacional com AWS Rekognition
+
 ## Introdução
 A visão computacional, também conhecida como reconhecimento visual ou percepção visual, é um campo de estudo que se concentra em permitir que os computadores obtenham uma compreensão de alto nível de imagens e vídeos digitais. Envolve o desenvolvimento de algoritmos e técnicas para extrair informações significativas e fazer inferências a partir de dados visuais.
 
 Uma ferramenta poderosa no campo da visão computacional é o AWS Rekognition, que oferece uma ampla variedade de recursos e funcionalidades. Ele permite que os desenvolvedores executem tarefas como análise de imagem e vídeo, detecção e reconhecimento de objetos, análise facial, análise de sentimentos e muito mais. Aproveitando modelos e APIs pré-treinados, os desenvolvedores podem integrar facilmente essas funcionalidades em seus aplicativos sem a necessidade de extensa experiência em aprendizado de máquina.
 
 ## Objetivo
+Disponibilizar uma solução pronta para produção na AWS, capaz de receber requisições de imagens, extrair informações relevantes por meio do AWS Rekognition e retornar os resultados de forma estruturada, atendendo às especificações e formatos esperados para cada rota da API.
+
+## Requisitos
+Node.js (versão 10 ou superior)
+Acesso à AWS (para implantar a solução)
+AWS CLI configurado com as credenciais adequadas (opcional)
+
+## Instalação e Implantação
+1. Clone este repositório
+```bash
+git clone https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp.git
+```
+2. Navegue até o diretório do projeto:
+```bash
+cd visao-computacional
+```
+
+3. Instale as dependências do projeto:
+```bash
+npm install -g serverless
+```
+
+4. Configure as credenciais da AWS:
+```bash
+serverless config credentials --provider aws --key SUA_ACCESS_KEY --secret SUA_SECRET_KEY
+```
+5. Implante a solução na AWS:
+```bash
+serverless deploy
+```
+6. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
+
+
+
+
+
+
+
 
 
 ## Funcionamento 
@@ -41,9 +81,8 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
    [aws]: <https://aws.amazon.com/pt/>
    [sprint8main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/tree/main>
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ***
+
 
 ## Execução
 
