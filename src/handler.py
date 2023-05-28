@@ -1,5 +1,6 @@
-import json
 import boto3
+import json
+from .utils import get_image_creation_date
 
 def health(event, context):
     body = {
@@ -61,7 +62,7 @@ def v1_vision(event, context):
     
     result = {
         'url_to_image': url_to_image,
-        'created_image': '02-02-2023 17:00:00',
+        'created_image': get_image_creation_date(bucket, imageName),
         'labels': labels
     }
     

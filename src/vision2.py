@@ -1,6 +1,7 @@
 import boto3
 import json
-from utils import get_image_creation_date
+from .utils import get_image_creation_date
+
 
 def v2_vision(event, context):
     
@@ -11,7 +12,7 @@ def v2_vision(event, context):
     
     url_to_image = f"https://{bucket}/{imageName}"
     
-    # Conectar-se ao AWS Rekognition e seleciona o serviço de detecção de faces
+    # Conecta-se ao AWS Rekognition e seleciona o serviço de detecção de faces
     rekognition = boto3.client('rekognition')
     response = rekognition.detect_faces(
         Image={
