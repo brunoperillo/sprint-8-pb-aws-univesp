@@ -18,37 +18,47 @@ Uma ferramenta poderosa no campo da visão computacional é o [AWS Rekognition][
 Disponibilizar uma solução pronta para produção na AWS, capaz de receber requisições de imagens, extrair informações relevantes por meio do [AWS Rekognition][Amazon Rekognition] e retornar os resultados de forma estruturada, atendendo às especificações e formatos esperados para cada rota da API.
 
 ## Requisitos
-Node.js (versão 10 ou superior)
-Acesso à AWS (para implantar a solução)
-AWS CLI configurado com as credenciais adequadas (opcional)
+- Node.js (versão 10 ou superior)
+- Acesso à AWS (para implantar a solução)
+- AWS CLI configurado com as credenciais adequadas (opcional)
 
 ## Instalação e Implantação
 1. Clone este repositório
+Clone o repositório do projeto em seu ambiente local usando o comando:
 ```bash
 git clone https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp.git
 ```
 2. Navegue até o diretório do projeto:
+Use o comando cd para navegar até o diretório do projeto:
 ```bash
-cd visao-computacional
+cd sprint-8-pb-aws-univesp/visao-computacional
 ```
 
 3. Instale as [dependências][Serverless Framework] do projeto:
+Certifique-se de ter o Node.js instalado em sua máquina (versão 10 ou superior).
+Instale o Serverless Framework globalmente usando o seguinte comando:
 ```bash
 npm install -g serverless
 ```
+4. Configurar as [credenciais da AWS][Credenciais AWS]:
+- Acesse o Console de Gerenciamento da AWS e crie um usuário do IAM com permissões adequadas para acessar os serviços necessários (Lambda, S3, Rekognition, CloudWatch, IAM).
+- Anote a chave de acesso e a chave secreta geradas para o usuário do IAM.
 
-4. Configure as [credenciais da AWS][Credenciais AWS]:
+5. Configurar as credenciais localmente:
+Abra o terminal e execute o seguinte comando:
 ```bash
 serverless config credentials --provider aws --key SUA_ACCESS_KEY --secret SUA_SECRET_KEY
 ```
-5. Implante a solução na AWS:
+Substitua "SUA_ACCESS_KEY" e "SUA_SECRET_KEY" pelas suas próprias credenciais do IAM.
+
+6. Implante a solução na AWS:
 ```bash
 serverless deploy
 ```
-6. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
+7. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
 
 ## Funcionamento
-A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao AWS Rekognition e ao S3. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
+A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao [AWS Rekognition][Amazon Rekognition] e ao [S3][Amazon S3]. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
 
 ## Estrutura do projeto
 O projeto segue a estrutura padrão do framework Serverless e está organizado da seguinte forma:
@@ -56,27 +66,25 @@ O projeto segue a estrutura padrão do framework Serverless e está organizado d
 serverless.yml: arquivo de configuração do Serverless Framework, que define as funções Lambda, eventos, políticas de permissão e outros recursos.
 src/: diretório contendo o código-fonte das lambdas.
 src/handlers/: diretório contendo os manipuladores das requisições.
-src/services/: diretório contendo os serviços auxiliares, como integração com o Rekognition e S3.
-
-
-
-
-
-## Funcionamento 
-
+src/services/: diretório contendo os serviços auxiliares, como integração com o [Rekognition][Amazon Rekognition] e [S3][Amazon S3].
 
 ## Organização
 O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre os integrantes. O README.md foi escrito de forma objetiva e clara para facilitar a compreensão do projeto.
 
 ## Ferramentas utilizadas
-- AWS
+- [AWS][aws] ([Lambda][Amazon Lambda], [S3][Amazon S3], [Rekognition][Amazon Rekognition], [CloudWatch][Amazon CloudWatch] e [IAM][Amazon IAM])
+- [Serverless Framework][Serverless Framework]
 - VSCode
-- Git
+- GitHub
 
 ## Dificuldades Conhecidas
 
 ## Referências
-- [Amazon Rekognition][Amazon Rekognition]
+- [AWS Rekognition][Amazon Rekognition]
+- [AWS S3][Amazon S3]
+- [AWS IAM][Amazon IAM]
+- [AWS Lambda][Amazon Lambda]
+- [AWS CloudWatch][Amazon CloudWatch]
 - [Serverless Framework][Serverless Framework]
 - [Credenciais AWS][Credenciais AWS]
 - <https://github.com/rjsabia/captionApp> (JS)
@@ -91,11 +99,14 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
 | [<img src="https://avatars.githubusercontent.com/u/81330043?v=4" width=115><br><sub>Bernardo Lima</sub>](https://github.com/belima93) | [<img src="https://avatars.githubusercontent.com/u/25699466?v=4" width=115><br><sub>Bruno Monserrat Perillo</sub>](https://github.com/brunoperillo) |  [<img src="https://avatars.githubusercontent.com/u/78061851?v=4" width=115><br><sub>Carlos Roberto Camilo</sub>](https://github.com/crobertocamilo) | [<img src="https://avatars.githubusercontent.com/u/94749597?v=4" width=115><br><sub>O'Dhara Maggi</sub>](https://github.com/odharamaggi)|
 | :---: | :---: | :---: |:---: |
 
-***
    [compass]: <https://compass.uol/en/home/>
    [aws]: <https://aws.amazon.com/pt/>
    [sprint8main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/tree/main>
    [Amazon Rekognition]: <https://aws.amazon.com/pt/rekognition/>
+   [Amazon S3]: <https://aws.amazon.com/pt/s3/>
+   [Amazon IAM]: <https://aws.amazon.com/pt/iam/>
+   [Amazon Lambda]: <https://aws.amazon.com/pt/lambda/>
+   [Amazon CloudWatch]: <https://aws.amazon.com/pt/cloudwatch/>
    [Serverless Framework]: <https://www.serverless.com/framework/docs/getting-started>
    [Credenciais AWS]: <https://www.serverless.com/framework/docs/providers/aws/guide/credentials/>
 ***
