@@ -138,33 +138,46 @@ GET /v2
 
 ## Resultados
 
-### POST /v1/vision
+A API oferece resultados precisos e confiáveis na detecção de rótulos e emoções em faces a partir das imagens fornecidas.
 
-Faça requisições `POST` para a rota /v1/vision, inserindo no body da requisição o nome do bucket e o nome da imagem. Verifique o resltado conforme exemplo:
+- Fazendo requisições `POST` para a rotas /v1/vision e /v2/vision e inserindo no body da requisição o nome do bucket e o nome da imagem é possível obter os resultados.
+
+### Exemplos abaixo:
+
+#### POST /v1/vision
 
 <div align="center">
   <img src="./assets/result_imgs/v1-vision.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/gato4.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/gato4.jpg</a> -
+  <sub>
+    <p style="padding: 10px">Neste exemplo, a API detectou os seguintes rótulos: "cat", "mammal", "pet" e "wood".</p>
+  </sub>
 </div>
 
 ---
 
-### POST /v2/vision
+#### POST /v2/vision
 
-Seguindo as mesmas instruções, envie requisições do tipo POST para a rota /v2/vision
-Lembre-se de modificar o nome da imagem para referênciar uma imagem que possua rostos.
+- OBS: Lembre-se de modificar o nome da imagem para referênciar uma imagem que possua rostos.
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a> -
+  <sub>
+    <p style="padding: 10px">Neste exemplo, foi detectada a emoção: "angry" e accurácia.</p>
+  </sub>
 </div>
 
 <br>
-Caso exista mais de um rosto na sua imagem, a resposta deverá ser retornada com um resultado para cada face, conforme observado no exemplo:
+
+- Caso exista mais de um rosto na sua imagem, a resposta deverá ser retornada com um resultado para cada face, conforme observado no exemplo:
 
 <div align="center">
   <img src="./assets/result_imgs/v2-vision-varias.png">
-  <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a>
+  <a href="https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg" target="_blank">https://sprint-8-vision.s3.amazonaws.com/varias_emocoes.jpg</a> -
+  <sub>
+    <p style="padding: 10px">Neste exemplo, foi detectada as seguintes emoções: "surprised", "angry", "happy" e a accurácia de cada.</p>
+  </sub>
 </div>
 
 ---
