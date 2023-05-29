@@ -27,7 +27,7 @@ def v1vision_description(event, context):
     s3 = boto3.client("s3")
 
     # reading file from s3 bucket and passing it as bytes
-    fileObj = s3.get_object(Bucket="bucket-images-sprint8", Key="10095785.jpg")
+    fileObj = s3.get_object(Bucket="kelly-serverless-sprint8-2", Key="1images.jpg")
     file_content = fileObj["Body"].read()
 
     # passing bytes data
@@ -54,7 +54,7 @@ def v2vision_description(event, context):
     s3 = boto3.client("s3")
 
     # reading file from s3 bucket and passing it as bytes
-    fileObj = s3.get_object(Bucket="bucket-images-sprint8", Key="jovem.jpg")
+    fileObj = s3.get_object(Bucket="kelly-serverless-sprint8-2", Key="1images.jpg")
     file_content = fileObj["Body"].read()
 
     # passing bytes data
