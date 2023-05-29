@@ -21,14 +21,14 @@ A solução utiliza o framework Serverless para criar um conjunto de lambdas que
 
 A arquitetura geral do projeto é a seguinte:
 
-1. O usuário fornece uma imagem que é enviada para o serviço S3, que é um serviço de armazenamento de objetos da AWS.
-2. O API Gateway, que atua como ponto de entrada da aplicação, recebe a requisição HTTP com a imagem.
-3. O API Gateway encaminha a requisição para a função Lambda correspondente.
-4. A função Lambda é responsável por processar a imagem recebida e invocar o serviço Rekognition da AWS.
-5. O serviço Rekognition, utilizando técnicas de visão computacional, extrai informações da imagem, como rótulos (tags) que descrevem o conteúdo da imagem e emoções identificadas nas faces presentes na imagem.
-6. A função Lambda recebe a resposta do Rekognition e realiza o log dos resultados no serviço CloudWatch.
-7. A resposta final contendo as informações processadas é retornada ao API Gateway.
-8. O API Gateway envia a resposta ao usuário que fez a requisição.
+1. O usuário fornece uma imagem que é enviada para o serviço [S3][Amazon S3], que é um serviço de armazenamento de objetos da AWS.
+2. O [API Gateway][API Gateway], que atua como ponto de entrada da aplicação, recebe a requisição HTTP com a imagem.
+3. O [API Gateway][API Gateway] encaminha a requisição para a função [Lambda][Amazon Lambda] correspondente.
+4. A função [Lambda][Amazon Lambda] é responsável por processar a imagem recebida e invocar o serviço [Rekognition][Amazon Rekognition] da AWS.
+5. O serviço [Rekognition][Amazon Rekognition], utilizando técnicas de visão computacional, extrai informações da imagem, como rótulos (tags) que descrevem o conteúdo da imagem e emoções identificadas nas faces presentes na imagem.
+6. A função [Lambda][Amazon Lambda] recebe a resposta do [Rekognition][Amazon Rekognition] e realiza o log dos resultados no serviço [CloudWatch][Amazon CloudWatch].
+7. A resposta final contendo as informações processadas é retornada ao [API Gateway][API Gateway].
+8. O [API Gateway][API Gateway] envia a resposta ao usuário que fez a requisição.
 
 Dessa maneira essa será a arquitetura a ser impantada em TODA ATIVIDADE será:
 
