@@ -109,7 +109,7 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <img src="https://avatars.githubusercontent.com/u/25699466?v=4" alt="Foto Bruno" width="100%">
+      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/25699466?v=4" alt="Foto Bruno" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;">Bruno Monserrat Perillo</p></div>
     </td>
     <td>
       <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bruno.png?raw=true" alt="Analise facial Bruno" width="90%">
@@ -120,7 +120,7 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <img src="https://avatars.githubusercontent.com/u/81330043?v=4" alt="Foto Bernardo" width="100%">
+      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/81330043?v=4" alt="Foto Bernardo" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;">Bernardo Lima</p></div>
     </td>
     <td>
       <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bernardo.png?raw=true" alt="Analise facial Bernardo" width="90%">
@@ -131,7 +131,7 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <img src="https://avatars.githubusercontent.com/u/78061851?v=4" alt="Foto Carlos" width="100%">
+      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/78061851?v=4" alt="Foto Carlos" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;">Carlos Roberto Camilo</p></div>
     </td>
     <td>
       <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_carlos.png?raw=true" alt="Analise facial Carlos" width="90%">
@@ -142,7 +142,7 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <img src="https://avatars.githubusercontent.com/u/94749597?v=4" alt="Foto O'Dhara" width="100%">
+      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/94749597?v=4" alt="Foto O'Dhara" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;">O'Dhara Maggi</p></div>
     </td>
     <td>
       <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_odhara.png?raw=true" alt="Analise facial O'Dhara" width="90%">
