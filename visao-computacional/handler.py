@@ -27,7 +27,7 @@ def v1vision_description(event, context):
     s3 = boto3.client("s3")
 
     # reading file from s3 bucket and passing it as bytes
-    fileObj = s3.get_object(Bucket="kelly-serverless-sprint8-2", Key="1images.jpg")
+    fileObj = s3.get_object(Bucket="bucket-images-sprint8", Key="10095785.jpg")
     file_content = fileObj["Body"].read()
 
     # passing bytes data
@@ -35,9 +35,9 @@ def v1vision_description(event, context):
         Image={"Bytes": file_content}, MaxLabels=3, MinConfidence=70
     )
 
-    print(response)
-
-    return response
+    labels = [{'confidence': label['Confidence'], 'Name': label['Name']} for label in response["Labels"]]
+    
+    return labels
 
 
 def v2_description(event, context):
