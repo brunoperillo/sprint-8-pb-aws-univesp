@@ -234,11 +234,10 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
 - [API Gateway][API Gateway]
 - [Serverless Framework][Serverless Framework]
 - [Credenciais AWS][Credenciais AWS]
-- <https://github.com/rjsabia/captionApp> (JS)
-- <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/labels.html> (Trabalhando com Rótulos)
-- <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html> (Exemplos de código)
-- <https://docs.aws.amazon.com/rekognition/latest/dg/faces-detect-images.html> (Trabalhando com Faces)
-- <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html> (Exemplos de código)
+- [Trabalhando com Rótulo][Trabalhando com Rótulo]
+- [Exemplos de código][Exemplos de código]
+- [Trabalhando com Faces][Trabalhando com Faces]
+- [Exemplos de código][Exemplos de código]
 
 ----------
 
@@ -257,4 +256,9 @@ O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre 
    [Amazon CloudWatch]: <https://aws.amazon.com/pt/cloudwatch/>
    [Serverless Framework]: <https://www.serverless.com/framework/docs/getting-started>
    [Credenciais AWS]: <https://www.serverless.com/framework/docs/providers/aws/guide/credentials/>
+   [Trabalhando com Rótulo]: <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/labels.html>
+   [Exemplos de código]: <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html>
+   [Trabalhando com Faces]: <https://docs.aws.amazon.com/rekognition/latest/dg/faces-detect-images.html>
+   [Exemplos de código]: <https://docs.aws.amazon.com/pt_br/rekognition/latest/dg/service_code_examples.html>
+   
 ***
