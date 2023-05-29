@@ -12,7 +12,19 @@ provider:
         - "s3:GetObject"
       Resource: 
         - "*"
-                         
+
+resources:
+  Resources:
+    MinhasFotosBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: !Sub "mycatphotos-${AWS::AccountId}"
+
+    MeusTextosBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: !Sub "myphotos-${AWS::AccountId}"
+
 functions:
   health:
     handler: src/handler.health
@@ -44,5 +56,3 @@ functions:
       - httpApi:
           path: /v2/vision
           method: post
-
-

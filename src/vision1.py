@@ -8,7 +8,7 @@ def v1_vision(event, context):
     request_body = json.loads(event['body'])
     bucket = request_body['bucket']
     imageName = request_body['imageName']
-    url_to_image = f"https://{bucket}/{imageName}"
+    url_to_image = f"https://{bucket}.s3.amazonaws.com/{imageName}"
     
     # Verificar se a imagem existe no bucket
     s3 = boto3.client('s3')
