@@ -42,7 +42,7 @@ Desenvolver função Lambdas para chamar os serviços Rekognition e CloudWatch p
 
 Será atráves da função lambda que chama os serviços Rekognition e CloudWatch e realiza a análise de imagens carregadas no buket S3, que deve ser criado.
 
-Pode seguir os passos a seguir:
+Deverá seguir esses passso: 
 
 1. Configure o ambiente de desenvolvimento
 Certifique-se de ter o AWS CLI instalado e configurado com suas credenciais de acesso.
@@ -88,7 +88,7 @@ O projeto foi desenvolvido em duas frentes, parte do grupo ficou com a organiza�
 
 ## Dificuldades Conhecidas
 
-Fazer a parte da lógica do código no VScode e fazer funcionar. 
+As dificuldades foram em relação a configuração das politicas e permissões que deveriamos usar, entender e fazer a lógica do código no VScode rodar corretamente. E extrair o sentimentos do serviços do Rekognition.  
 
 
 
