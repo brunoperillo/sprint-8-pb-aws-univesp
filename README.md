@@ -65,7 +65,7 @@ serverless deploy
 
 Depois anote os endpoits para as rotas que aparecerá no terminal.
 
-2. Crie um arquivo Python para a função lambda.
+2. Crie um arquivo para função lambda.
 
 Nessa parte, a função lambda é acionada quando um objeto é criado em um bucket do S3. Ela usa o serviço Rekognition para realizar a análise de rostos na imagem e o serviço CloudWatch para enviar métricas contendo o número de rostos detectados.
 
