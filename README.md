@@ -109,10 +109,10 @@ Exemplos de resultados obtidos (como definido no padrão informado, são apresen
 <table>
   <tr>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat2.jpg?raw=true" width="60%"> 
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat4.jpg?raw=true" width="52%"> 
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat1_labels.png?raw=true" alt="Detecção rotulos gato" width="100%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat4_labels.png?raw=true" alt="Detecção rotulos gato" width="100%">
     </td>
   </tr>
 </table>
@@ -186,16 +186,30 @@ Exemplos de resultados obtidos:
   </tr>
 </table>
 
+<br></br>
+Múltiplas faces numa mesma imagem:
+
+<div align="center">
+  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/multiple_faces.png?raw=true" width="80%"/>
+</div>
+<div align="center">
+  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_odhara-multiple_faces.png?raw=true" width="80%"/>
+</div>
+
+<br></br>
+Nenhuma face na imagem:
+
 <table>
   <tr>
     <td>
-      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/94749597?v=4" alt="Foto O'Dhara" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;"><a href="https://github.com/odharamaggi" target="_blank">O'Dhara Maggi</a></p></div>
+      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/no_faces.jpg?raw=true" alt="Sem faces" width="50%">
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_odhara.png?raw=true" alt="Analise facial O'Dhara" width="90%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial-no_faces.png?raw=true" alt="Análise facial - sem faces" width="100%">
     </td>
   </tr>
 </table>
+
 
 ## Organização
 O projeto foi desenvolvido em equipe, com a divisão de responsabilidades entre os integrantes. O README.md foi escrito de forma objetiva e clara para facilitar a compreensão do projeto.
