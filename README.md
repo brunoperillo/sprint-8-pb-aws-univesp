@@ -44,50 +44,41 @@ Dessa maneira essa será a arquitetura a ser impantada em TODA ATIVIDADE será:
 - AWS CLI configurado com as credenciais adequadas (opcional)
 
 ## Instalação e Implantação
-1. Clone este repositório
-Clone o repositório do projeto em seu ambiente local usando o comando:
-```bash
-git clone https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp.git
-```
-2. Navegue até o diretório do projeto:
-Use o comando cd para navegar até o diretório do projeto:
-```bash
-cd sprint-8-pb-aws-univesp/visao-computacional
-```
-
+1. Clone este repositório;
+2. Navegue até o diretório do projeto;
 3. Instale as [dependências][Serverless Framework] do projeto:
+
 Certifique-se de ter o Node.js instalado em sua máquina (versão 10 ou superior).
 Instale o Serverless Framework globalmente usando o seguinte comando:
 ```bash
 npm install -g serverless
 ```
-4. Configurar as [credenciais da AWS][Credenciais AWS]:
-- Acesse o Console de Gerenciamento da AWS e crie um usuário do IAM com permissões adequadas para acessar os serviços necessários (Lambda, S3, Rekognition, CloudWatch, IAM).
-- Anote a chave de acesso e a chave secreta geradas para o usuário do IAM.
-
-5. Configurar as credenciais localmente:
+4. Configure as [credenciais da AWS][Credenciais AWS] localmente utilizando a *key* e a *secret key* geradas para o usuário no IAM:
 Abra o terminal e execute o seguinte comando:
 ```bash
 serverless config credentials --provider aws --key SUA_ACCESS_KEY --secret SUA_SECRET_KEY
 ```
-Substitua "SUA_ACCESS_KEY" e "SUA_SECRET_KEY" pelas suas próprias credenciais do IAM.
-
-6. Implante a solução na AWS:
+5. Faça o *deploy* do projeto na AWS:
 ```bash
 serverless deploy
 ```
-7. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
+6. Se a instalação for bem sucedida, serão exibidos os *endpoints* gerados no API Gateway e o nome do bucket gerado no S3 (caso não ainda não existisse), como exemplificado na imagem abaixo:
 
-O projeto é dividido em duas partes, com rotas diferentes, nomeadamente de Parte 1 e Parte 2
+<div align="center">
+  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/deploy.png?raw=true" alt="endpoints gerados" width="60%"/>
+</div>
+   
+7. Faça o upload das imagens para os buckets no S3;
+
+8. Para testar a API, utilize, por exemplo o [**Postman**](https://www.postman.com/), ou a função de teste de rotas no console do API Gateway no site da AWS. O padrão das requisições deve respeitar o formato informado nas seções abaixo.
 
 
 ## Estrutura do projeto
-O projeto segue a estrutura padrão do framework Serverless e está organizado da seguinte forma:
+O projeto segue a estrutura padrão do Serverless Framework e está organizado da seguinte forma:
 
-- serverless.yml: arquivo de configuração do Serverless Framework, que define as funções Lambda, eventos, políticas de permissão e outros recursos.
-- src/: diretório contendo o código-fonte das lambdas.
-- src/handlers/: diretório contendo os manipuladores das requisições.
-- src/services/: diretório contendo os serviços auxiliares, como integração com o [Rekognition][Amazon Rekognition] e [S3][Amazon S3].
+- serverless.yml: arquivo de configuração do Serverless Framework, que define as funções Lambda, eventos, políticas de permissão e outros recursos;
+- src/: diretório contendo o código-fonte das funções Lambdas (a linguagem de programação utilizada foi python);
+- assets/: diretório com imagens utilizadas para testes da API e prints dos resultados das análises.
 
 ## Implementação da solução
 
