@@ -35,6 +35,7 @@ Desenvolver função Lambdas para chamar os serviços Rekognition e CloudWatch p
 
 ## Arquitetura
 
+![arquitetura](https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/assets/117780664/109a28e6-334f-4187-8631-61eea5403b4d)
 
 ***
 ## Funcionamento 
