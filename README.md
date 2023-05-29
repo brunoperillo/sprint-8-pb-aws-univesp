@@ -1,6 +1,10 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
+<center>
+
 ![título](/assets/rekog.png)
+</center>
+
 ## Introdução
 A visão computacional, também conhecida como reconhecimento visual ou percepção visual, é um campo de estudo que se concentra em permitir que os computadores obtenham uma compreensão de alto nível de imagens e vídeos digitais. Envolve o desenvolvimento de algoritmos e técnicas para extrair informações significativas e fazer inferências a partir de dados visuais.
 
@@ -119,7 +123,6 @@ Requisição de imagem inexistente no bucket:
 
 ![Erro](/assets/erro.png)
 
-***
 <br>
 
 ### **Detecção facial** (Rota /v2/vision)
@@ -193,7 +196,7 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/no_faces.jpg?raw=true" alt="Sem faces" width="20">
+      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/no_faces.jpg?raw=true" alt="Sem faces" width="200">
     </td>
     <td>
       <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial-no_faces.png?raw=true" alt="Análise facial - sem faces" width="500">
