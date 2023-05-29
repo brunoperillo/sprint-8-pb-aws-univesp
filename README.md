@@ -89,6 +89,10 @@ Fazer a parte da lógica do código no VScode e fazer funcionar.
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1705736922b33874bdceed6f6b38c69741efffd5
 ***
 ## Desenvolvedores do projeto
 
