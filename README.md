@@ -137,12 +137,12 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/25699466?v=4" alt="Foto Bruno" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;"><a href="https://github.com/brunoperillo" target="_blank">Bruno Monserrat Perillo</a>
+      <div style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/25699466?v=4" alt="Foto Bruno" width="100%"><p style="margin: 0 auto; font-size: 10px; text-align: center;"><a href="https://github.com/brunoperillo" target="_blank"></a>
     </p>
 </div>
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bruno.png?raw=true" alt="Analise facial Bruno" width="90%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bruno.png?raw=true" alt="Analise facial Bruno" width="900">
     </td>
   </tr>
 </table>
@@ -150,10 +150,10 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/81330043?v=4" alt="Foto Bernardo" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;"><a href="https://github.com/belima93"target="_blank">Bernardo Lima</a></p></div>
+      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/81330043?v=4" alt="Foto Bernardo" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;"><a href="https://github.com/belima93"target="_blank"></a></p></div>
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bernardo.png?raw=true" alt="Analise facial Bernardo" width="90%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_bernardo.png?raw=true" alt="Analise facial Bernardo" width="900">
     </td>
   </tr>
 </table>
@@ -161,34 +161,38 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/78061851?v=4" alt="Foto Carlos" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;"><a href="https://github.com/crobertocamilo" target="_blank">Carlos Roberto Camilo</a></p></div>
+      <div style="text-align: center;"><img src="https://avatars.githubusercontent.com/u/78061851?v=4" alt="Foto Carlos" width="100%"><p style="margin: 0 auto; font-size: 24px; text-align: center;"><a href="https://github.com/crobertocamilo" target="_blank"></a></p></div>
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_carlos.png?raw=true" alt="Analise facial Carlos" width="90%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_carlos.png?raw=true" alt="Analise facial Carlos" width="900">
     </td>
   </tr>
 </table>
 
 <br></br>
-Múltiplas faces numa mesma imagem:
+### Múltiplas faces numa mesma imagem:
+<br>
 
 <div align="center">
   <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/multiple_faces.png?raw=true" width="80%"/>
 </div>
+<br>
 <div align="center">
-  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_odhara-multiple_faces.png?raw=true" width="80%"/>
+  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial_odhara-multiple_faces.png?raw=true" width="100%"/>
 </div>
 
-<br></br>
-Nenhuma face na imagem:
+<br>
+
+### Nenhuma face na imagem:
+<br>
 
 <table>
   <tr>
     <td>
-      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/no_faces.jpg?raw=true" alt="Sem faces" width="50%">
+      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/no_faces.jpg?raw=true" alt="Sem faces" width="250">
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial-no_faces.png?raw=true" alt="Análise facial - sem faces" width="100%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/analise_facial-no_faces.png?raw=true" alt="Análise facial - sem faces" width="500">
     </td>
   </tr>
 </table>
