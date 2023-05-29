@@ -7,12 +7,12 @@
 ## 📌 Navegação
 
 - [📝 Introdução](#introdução)
-- [🎯 Objetivo](#objetivo)
+- [🎯 Objetivo](#objetivos)
 - [💻 Desenvolvimento](#desenvolvimento)
   - [🔧 Requisitos](#requisitos)
-  - [🔧 Ferramentas e tecnologias utilizadas](#feramentas-e-tecnologias-utilizadas)
+  - [🔧 Ferramentas e tecnologias utilizadas](#ferramentas-e-tecnologias-utilizadas)
 - [📏 Execução](#execução)
-- [📈 Resultados](#resultado)
+- [📈 Resultados](#resultados)
 - [✅ Conclusão](#conclusão)
   - [📋 Organização](#organização)
   - [🤷 Dificuldades](#dificuldades)
@@ -34,15 +34,15 @@ O framework [Serverless](https://www.serverless.com/) permite que os desenvolved
 
 ---
 
-## Objetivo
+## Objetivos
 
-Foi desenvolvida uma API que faz a detecção de rótulos ou de emoções em faces a partir de imagens colocadas no bucket S3, para isso são utilizadas:
+* Desenvovler um conjunto de funções lambdas
 
-* Funções Lambda que irão dar suporte às APIs
+* Usar APIs para dar suporte à chamada do AWS Rekognition
 
-* API Amazon Rekognition que faz a detecção de rótulos e de faces
+* Extrair tags de imagens armazenadas num BucketS3
 
-* Amazon CloudWatch onde são registrados os logs de chamadas da API
+* Registrar os logs dos resultados no AWS CloudWatch
 
 ---
 
@@ -88,7 +88,16 @@ serverless deploy
 
 Anote os endpoits para as rotas: /, /v1, /v2, /1/vision e /v2/vision
 
-Manualmente, faça o envio dos arquivos de imagem para seu bucket recém criado.
+Desta forma, após construção da stack, a arquitetura observada deverá ser exatamente como no exemplo abaixo:
+
+<div align="center">
+  <img src="./assets/arquitetura-base.png">
+  <sub>
+    <p>Arquitetura do projeto</p><br>
+  </sub>
+</div>
+
+Como observado na imagem acima, manualmente, faça o envio dos arquivos de imagem para seu bucket recém criado.
 Adicione essas permissões para que os arquivos no seu bucket estejam acessíveis publicamente:
 
 ```json
@@ -297,7 +306,7 @@ Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas e s
 
 ---
 
-## Integrantes - Grupo 2
+## Equipe
 
 <div align="center">
 
