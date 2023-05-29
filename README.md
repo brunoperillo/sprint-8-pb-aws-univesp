@@ -98,22 +98,6 @@ Desta forma, após construção da stack, a arquitetura observada deverá ser ex
 </div>
 
 Como observado na imagem acima, manualmente, faça o envio dos arquivos de imagem para seu bucket recém criado.
-Adicione essas permissões para que os arquivos no seu bucket estejam acessíveis publicamente:
-
-```json
-  {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::<YOUR_BUCKET_NAME>/*"
-        }
-    ]
-  }
-```
 
 ---
 
