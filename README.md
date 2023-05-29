@@ -47,23 +47,29 @@ Pode seguir os passos a seguir:
 1. Configure o ambiente de desenvolvimento
 Certifique-se de ter o AWS CLI instalado e configurado com suas credenciais de acesso.
 
-2. Crie um novo diretório para o projeto e navegue até ele.
-
-```mkdir analyze-images-lambda
-cd analyze-images-lambda
+```bash
+  $ aws configure
+  AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+  AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+  Default region name [None]: us-east-1
+  Default output format [None]: ENTER
 ```
-3. Inicie um novo ambiente virtual Python e ative-o
 
-```python -m venv venv
-source venv/bin/activate
+Deverá alterar o nome do BucketS3 no arquivo `serverless.yml` para um nome exclusivo.
+
+Navegue até o diretório `visao_computavcional` e faça o deploy:
+
+```bash
+serverless deploy
 ```
-4. Instale as dependências necessárias
 
-5. Crie um arquivo Python para a função lambda.
+Depois anote os endpoits para as rotas que aparecerá no terminal.
+
+2. Crie um arquivo Python para a função lambda.
 
 Nessa parte, a função lambda é acionada quando um objeto é criado em um bucket do S3. Ela usa o serviço Rekognition para realizar a análise de rostos na imagem e o serviço CloudWatch para enviar métricas contendo o número de rostos detectados.
 
-6. Crie um arquivo template.yaml para definir a configuração do serviço lambda.
+3. Crie um arquivo template.yaml para definir a configuração do serviço lambda.
 
 Para usar o Amazon Rekognition, é necessário formatar corretamente os campos de entrada e saída da API, além de definir os códigos de status adequados para sucesso e erro. 
 
