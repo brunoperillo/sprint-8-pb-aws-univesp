@@ -74,9 +74,6 @@ Se for 200, a solicitação foi bem-sucedida e o resultado é impresso. Caso con
 
 
 ****
-
-## Resultado 
-*** 
 ## Organização
 
 O projeto foi desenvolvido em duas frentes, parte do grupo ficou com a organização e desenvolvimento na AWS Rekognition e outra parte ficou para desenvolver o conteúdo do README. 
@@ -89,10 +86,6 @@ Fazer a parte da lógica do código no VScode e fazer funcionar.
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1705736922b33874bdceed6f6b38c69741efffd5
 ***
 ## Desenvolvedores do projeto
 
