@@ -54,12 +54,12 @@ def v2vision_description(event, context):
     s3 = boto3.client("s3")
 
     # reading file from s3 bucket and passing it as bytes
-    fileObj = s3.get_object(Bucket="kelly-serverless-sprint8-2", Key="1images.jpg")
+    fileObj = s3.get_object(Bucket="bucket-images-sprint8", Key="1images.jpg")
     file_content = fileObj["Body"].read()
 
     # passing bytes data
     response = client.detect_faces(
-        Image={"Bytes": file_content}
+        Image={"Bytes": file_content}, Attributes=["ALL"]
     )
 
     print(response)
