@@ -16,6 +16,28 @@ Uma ferramenta poderosa no campo da visão computacional é o [AWS Rekognition][
 ## Objetivo
 Disponibilizar uma solução pronta para produção na AWS, capaz de receber requisições de imagens, extrair informações relevantes por meio do [AWS Rekognition][Amazon Rekognition] e retornar os resultados de forma estruturada, atendendo às especificações e formatos esperados para cada rota da API.
 
+## Funcionamento
+A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao [AWS Rekognition][Amazon Rekognition] e ao [S3][Amazon S3]. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
+
+A arquitetura geral do projeto é a seguinte:
+
+1. O usuário fornece uma imagem que é enviada para o serviço [S3][Amazon S3], que é um serviço de armazenamento de objetos da AWS.
+2. O [API Gateway][API Gateway], que atua como ponto de entrada da aplicação, recebe a requisição HTTP com a imagem.
+3. O [API Gateway][API Gateway] encaminha a requisição para a função [Lambda][Amazon Lambda] correspondente.
+4. A função [Lambda][Amazon Lambda] é responsável por processar a imagem recebida e invocar o serviço [Rekognition][Amazon Rekognition] da AWS.
+5. O serviço [Rekognition][Amazon Rekognition], utilizando técnicas de visão computacional, extrai informações da imagem, como rótulos (tags) que descrevem o conteúdo da imagem e emoções identificadas nas faces presentes na imagem.
+6. A função [Lambda][Amazon Lambda] recebe a resposta do [Rekognition][Amazon Rekognition] e realiza o log dos resultados no serviço [CloudWatch][Amazon CloudWatch].
+7. A resposta final contendo as informações processadas é retornada ao [API Gateway][API Gateway].
+8. O [API Gateway][API Gateway] envia a resposta ao usuário que fez a requisição.
+
+Dessa maneira essa será a arquitetura a ser impantada em TODA ATIVIDADE será:
+
+<p align="center">
+  <img src="./assets/arquitetura-base.png" alt="arquitetura-base" width="800">
+</p>
+
+
+
 ## Requisitos
 - Node.js (versão 10 ou superior)
 - Acesso à AWS (para implantar a solução)
@@ -56,8 +78,8 @@ serverless deploy
 ```
 7. Após a implantação, você receberá informações sobre os endpoints disponíveis. Anote essas informações para uso posterior.
 
-## Funcionamento
-A solução utiliza o framework Serverless para criar um conjunto de lambdas que se integram ao [AWS Rekognition][Amazon Rekognition] e ao [S3][Amazon S3]. As lambdas são responsáveis por receber as requisições, processar as imagens e extrair as informações relevantes. Os resultados são retornados de acordo com o formato esperado para cada rota da API.
+O projeto é dividido em duas partes, com rotas diferentes, nomeadamente de Parte 1 e Parte 2
+
 
 ## Estrutura do projeto
 O projeto segue a estrutura padrão do framework Serverless e está organizado da seguinte forma:
