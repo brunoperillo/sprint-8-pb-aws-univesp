@@ -92,28 +92,38 @@ Formato da requisição (POST):
 
 Como definido no padrão informado, são apresentados somente os quatro primeiros rótulos (que possuem os maiores índices de confiança).
 
-Exemplos dos resultados obtidos:
+Exemplo dos resultados obtidos:
 
-<br>
-<img src="./assets/cat4.jpg" alt="cat4" width="180px">
-<img src="./assets/cat4_labels.png" alt="cat4" width="360px">
-<center><sub><i>Análise da imagem de Gato</sub></i></center>
-<br>
+<table>
+  <tr>
+    <td>
+      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/raw/grupo-1/assets/cat4.jpg" alt="Gato" width="250">
+    </td>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/raw/grupo-1/assets/cat4_labels.png" alt="Rótulo Gato" width="500">
+    </td>
+  </tr>
+</table>
 
+<table>
+  <tr>
+    <td>
+      <div style="text-align: center;"><img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/raw/grupo-1/assets/dog1.png" alt="Gato" width="250">
+    </td>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/raw/grupo-1/assets/dog1_labels.png" alt="Rótulo Gato" width="500">
+    </td>
+  </tr>
+</table>
 
-<br>
-<img src="./assets/dog1.png" alt="cat4" width="180px">
-<img src="./assets/dog1_labels.png" alt="cat4" width="360px">
-<center><sub><i>Análise da imagem de Cachorro</sub></i></center>
-<br>
-
-
-<br>
-
-<center><img src="./assets/erro.png" alt="cat4" width="450px"></center>
-<center><sub><i>Requisição de imagem não existente no bucket</sub></i></center>
-
-</br>
+Requisição de imagem inexistente no bucket:
+<table>
+  <tr>
+    <td><center>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/raw/grupo-1/assets/erro.png" alt="Rótulo Gato" width="70%">
+    </td>
+  </tr>
+</table>
 
 ***
 <br>
