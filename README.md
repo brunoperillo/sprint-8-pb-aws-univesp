@@ -37,6 +37,7 @@ Desenvolver função Lambdas para chamar os serviços Rekognition e CloudWatch p
 
 ![arquitetura](https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/assets/117780664/109a28e6-334f-4187-8631-61eea5403b4d)
 
+***
 ## Funcionamento 
 
 Será atráves da função lambda que chama os serviços Rekognition e CloudWatch e realiza a análise de imagens carregadas no buket S3, que deve ser criado.
@@ -74,6 +75,8 @@ Se for 200, a solicitação foi bem-sucedida e o resultado é impresso. Caso con
 
 ****
 
+## Resultado 
+*** 
 ## Organização
 
 O projeto foi desenvolvido em duas frentes, parte do grupo ficou com a organização e desenvolvimento na AWS Rekognition e outra parte ficou para desenvolver o conteúdo do README. 
@@ -86,6 +89,7 @@ Fazer a parte da lógica do código no VScode e fazer funcionar.
 
 
 
+***
 ## Desenvolvedores do projeto
 
 ||<br><sub>  [<img src="https://avatars.githubusercontent.com/u/96358027?v=4"  width=115><br><sub>Diego Lopes </sub>](https://github.com/Diegox0301) | [<img src="https://avatars.githubusercontent.com/u/124359272?v=4" width=115><br><sub>Irati Gonçalves Maffra</sub>](https://github.com/IratiMaffra) | [<img src="https://avatars.githubusercontent.com/u/88354075?v=4" width=115><br><sub>Kelly Patricia Lopes Silva</sub>](https://github.com/KellyPLSilva) | [<img src="https://avatars.githubusercontent.com/u/117780664?v=4" width=115><br><sub>Viviane Alves</sub>](https://github.com/Vivianes86) |
