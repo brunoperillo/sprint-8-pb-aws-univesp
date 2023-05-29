@@ -1,12 +1,5 @@
 # Avaliação Sprint 8 - Programa de Bolsas Compass UOL / AWS e Univesp
 
-Avaliação da [Sprint 8][sprint8main] do Programa de Bolsas [Compass UOL][compass] para formação em *machine learning* com [AWS][aws]. [Diretrizes do pedido][sprint8main] 
-***
-
-<div align="center">
-  <h1 style="font-size: 32px;"><b>Visão Computacional com AWS Rekognition</b></h1>
-</div>
-
 
 ## Introdução
 A visão computacional, também conhecida como reconhecimento visual ou percepção visual, é um campo de estudo que se concentra em permitir que os computadores obtenham uma compreensão de alto nível de imagens e vídeos digitais. Envolve o desenvolvimento de algoritmos e técnicas para extrair informações significativas e fazer inferências a partir de dados visuais.
@@ -81,8 +74,10 @@ O projeto segue a estrutura padrão do Serverless Framework e está organizado d
 - assets/: diretório com imagens utilizadas para testes da API e prints dos resultados das análises.
 
 ## Implementação da solução
+<br>
 
-### > **Detecção de rótulos** (Rota /v1/vision)
+###  **Detecção de rótulos** (Rota /v1/vision)
+<br>
 
 A partir de uma função Lambda em python associada à rota, o Rekognition é acionado para detecção de rótulos na imagem salva num bucket do S3.
 
@@ -95,41 +90,38 @@ Formato da requisição (POST):
 }
 ```
 
-Exemplos de resultados obtidos (como definido no padrão informado, são apresentados somente os quatro primeiros rótulos, os com maior índice de confiança):
+Como definido no padrão informado, são apresentados somente os quatro primeiros rótulos (que possuem os maiores índices de confiança).
 
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat4.jpg?raw=true" width="52%"> 
-    </td>
-    <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat4_labels.png?raw=true" alt="Detecção rotulos gato" width="100%">
-    </td>
-  </tr>
-</table>
+Exemplos dos resultados obtidos:
 
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1.png?raw=true" alt="Foto cachorro" width="72%"> 
-    </td>
-    <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1_labels.png?raw=true" alt="Rotulos dog" width="90%">
-    </td>
-  </tr>
-</table>
+<br>
+<img src="./assets/cat4.jpg" alt="cat4" width="180px">
+<img src="./assets/cat4_labels.png" alt="cat4" width="360px">
+<center><sub><i>Análise da imagem de Gato</sub></i></center>
+<br>
 
-Exemplo de uma requisição com erro (imagem não existe no bucket):
 
-<div align="center">
-  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/erro.png?raw=true" alt="Requisição inválida" width="60%"/>
-</div>
+<br>
+<img src="./assets/dog1.png" alt="cat4" width="180px">
+<img src="./assets/dog1_labels.png" alt="cat4" width="360px">
+<center><sub><i>Análise da imagem de Cachorro</sub></i></center>
+<br>
 
-<br></br>
 
-### Detecção facial (Rota /v2/vision)
+<br>
 
-Foi criada uma função em python para acessar uma imagem salva num bucket do S3, acionar o Rekognition para análise facial, e retornar o *bounding box* da(s) face(s) detectada(s) e a expressão facial de maior índice de confiança.
+<center><img src="./assets/erro.png" alt="cat4" width="450px"></center>
+<center><sub><i>Requisição de imagem não existente no bucket</sub></i></center>
+
+</br>
+
+***
+<br>
+
+### **Detecção facial** (Rota /v2/vision)
+<br>
+
+Foi criada uma função em Python para acessar uma imagem salva num bucket do S3, acionar o Rekognition para análise facial, e retornar o *bounding box* da(s) face(s) detectada(s) e a expressão facial de maior índice de confiança.
 
 Formato da requisição (POST):
 
