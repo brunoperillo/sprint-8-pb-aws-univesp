@@ -91,6 +91,51 @@ O projeto segue a estrutura padrão do framework Serverless e está organizado d
 
 ## Implementação da solução
 
+### Detecção de rótulos (Rota /v1/vision)
+
+A partir de uma função Lambda em python associada à rota, o Rekognition é acionado para detecção de rótulos na imagem salva num bucket do S3.
+
+Formato da requisição (POST):
+
+```json
+{
+  "bucket": "mycatphotos",
+  "imageName": "cat.jpg"
+}
+```
+
+Exemplos de resultados obtidos:
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat1.jpg?raw=true" width="50%"> 
+    </td>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat1_labels.png?raw=true" alt="Detecção rotulos gato" width="100%">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1.png?raw=true" alt="Foto cachorro" width="85%"> 
+    </td>
+    <td>
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1_labels.png?raw=true" alt="Rotulos dog" width="75%">
+    </td>
+  </tr>
+</table>
+
+Exemplo de uma requisição com erro (imagem não existe no bucket):
+
+<div align="center">
+  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/erro.png?raw=true" alt="Requisição inválida" width="50%"/>
+</div>
+
+<br></br>
+
 ### Detecção facial (Rota /v2/vision)
 
 Foi criada uma função em python para acessar uma imagem salva num bucket do S3, acionar o Rekognition para análise facial, e retornar o *bounding box* da(s) face(s) detectada(s) e a expressão facial de maior índice de confiança.
