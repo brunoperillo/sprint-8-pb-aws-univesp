@@ -91,7 +91,7 @@ O projeto segue a estrutura padrão do framework Serverless e está organizado d
 
 ## Implementação da solução
 
-### Detecção de rótulos (Rota /v1/vision)
+### > **Detecção de rótulos** (Rota /v1/vision)
 
 A partir de uma função Lambda em python associada à rota, o Rekognition é acionado para detecção de rótulos na imagem salva num bucket do S3.
 
@@ -104,12 +104,12 @@ Formato da requisição (POST):
 }
 ```
 
-Exemplos de resultados obtidos:
+Exemplos de resultados obtidos (como definido no padrão informado, são apresentados somente os quatro primeiros rótulos, os com maior índice de confiança):
 
 <table>
   <tr>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat1.jpg?raw=true" width="50%"> 
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat2.jpg?raw=true" width="60%"> 
     </td>
     <td>
       <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/cat1_labels.png?raw=true" alt="Detecção rotulos gato" width="100%">
@@ -120,10 +120,10 @@ Exemplos de resultados obtidos:
 <table>
   <tr>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1.png?raw=true" alt="Foto cachorro" width="85%"> 
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1.png?raw=true" alt="Foto cachorro" width="72%"> 
     </td>
     <td>
-      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1_labels.png?raw=true" alt="Rotulos dog" width="75%">
+      <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/dog1_labels.png?raw=true" alt="Rotulos dog" width="90%">
     </td>
   </tr>
 </table>
@@ -131,7 +131,7 @@ Exemplos de resultados obtidos:
 Exemplo de uma requisição com erro (imagem não existe no bucket):
 
 <div align="center">
-  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/erro.png?raw=true" alt="Requisição inválida" width="50%"/>
+  <img src="https://github.com/Compass-pb-aws-2023-Univesp/sprint-8-pb-aws-univesp/blob/grupo-1/assets/erro.png?raw=true" alt="Requisição inválida" width="60%"/>
 </div>
 
 <br></br>
