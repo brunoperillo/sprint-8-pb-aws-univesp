@@ -9,7 +9,7 @@ def health(event, context):
         "input": event,
     }
 
-    response = {"statusCode": 200, "body": json.dumps(body["input"])}
+    response = {"statusCode": 200, "body": json.dumps(body)}
 
     return response
 
