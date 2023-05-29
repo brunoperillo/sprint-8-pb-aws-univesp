@@ -165,6 +165,7 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 #### POST /v1/vision
 
 <div align="center">
+  <img src="./assets/test_imgs/gato4.jpg" style="max-width:60%">
   <img src="./assets/result_imgs/v1-vision.png">
    <sub>
     <p style="padding: 10px">Exemplo 1: a API detectou os seguintes rótulos: "cat", "mammal", "pet" e "wood".</p>
@@ -179,9 +180,10 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 - OBS: Lembre-se de modificar o nome da imagem para referênciar uma imagem que possua rostos.
 
 <div align="center">
+  <img src="./assets/test_imgs/raiva.png" style="max-width:60%">
   <img src="./assets/result_imgs/v2-vision.png">
    <sub>
-    <p style="padding: 10px">Exemplo 2: foi detectada a emoção: "angry" e accurácia.</p>
+    <p style="padding: 10px">Exemplo 2: foi detectada a emoção: "angry" e accurácia de 99,89%.</p>
     <a href="https://sprint-8-vision.s3.amazonaws.com/raiva.png" target="_blank">https://sprint-8-vision.s3.amazonaws.com/raiva.png</a>
   </sub>
 </div>
@@ -191,6 +193,7 @@ A API oferece resultados precisos e confiáveis na detecção de rótulos e emo�
 - Caso exista mais de um rosto na sua imagem, a resposta deverá ser retornada com um resultado para cada face, conforme observado no exemplo:
 
 <div align="center">
+  <img src="./assets/test_imgs/varias_emocoes.jpg" style="max-width:60%">
   <img src="./assets/result_imgs/v2-vision-varias.png">
   <sub>
     <p style="padding: 10px">Exemplo 3: foi detectada as seguintes emoções: "surprised", "angry", "happy" e a accurácia de cada.</p>
@@ -207,6 +210,7 @@ A API possui um tratamento adequado de erros, visando fornecer respostas claras 
 - Caso a imagem passada para o Rekognition não possua nenhuma face, a resposta esperada deverá retornar os campos de `position` iguais "null" e código de erro igual a _500_, conforme exemplos:
 
 <div align="center">
+  <img src="./assets/test_imgs/gato4.jpg" style="max-width:60%">
   <img src="./assets/result_imgs/v2-vision-null.png">
   <sub>
     <p style="padding: 10px">Envio da imagem de um gato para o reconhecimento de faces, a resposta retorna como `null`</p>
